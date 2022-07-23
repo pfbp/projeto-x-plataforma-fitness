@@ -25,18 +25,18 @@ O código constante em todas as páginas é:
 
 Os ícones padrão na página são:
 
-- Ícone Registro de Laboratório "<i class="fa-solid fa-flask-vial"></i>"
-- Ícone Registro de Composição corporal "<i class="fa-solid fa-person"></i>"
-- Ícone Registro de Fotos "<i class="fa-solid fa-camera"></i>"
+- Ícone Registro de Laboratório `<i class="fa-solid fa-flask-vial"></i>`
+- Ícone Registro de Composição corporal `<i class="fa-solid fa-person"></i>`
+- Ícone Registro de Fotos `<i class="fa-solid fa-camera"></i>`
 
-- Ícone de Filtro simples "<i class="fa-solid fa-filter"></i>"
-- Ícone de Filtro múltiplo "<i class="fa-solid fa-filters"></i>"
+- Ícone de Filtro simples `<i class="fa-solid fa-filter"></i>`
+- Ícone de Filtro múltiplo `<i class="fa-solid fa-filters"></i>`
 
-- Ícone de Confirmação "<i class="fa-solid fa-check"></i>"
-- Ícone de Cancelamento "<i class="fa-solid fa-xmark-large"></i>"
+- Ícone de Confirmação `<i class="fa-solid fa-check"></i>`
+- Ícone de Cancelamento `<i class="fa-solid fa-xmark-large"></i>`
 
-- Ícone de Contatos "<i class="fa-solid fa-user-group"></i>"
-- Ícone de Adicionar contatos "<i class="fa-solid fa-user-plus"></i>"
+- Ícone de Contatos `<i class="fa-solid fa-user-group"></i>`
+- Ícone de Adicionar contatos `<i class="fa-solid fa-user-plus"></i>`
 
 ---
 
@@ -53,13 +53,13 @@ O código constante em todas as páginas é:
 
 As fontes são separadas em:
 
-- Fonte principal "Montserrat"
-- Fonte secundária "Open Sans"
-- Título principal "Montserrat"
-- Título secundário "Open Sans"
+- Fonte principal `Montserrat`
+- Fonte secundária `Open Sans`
+- Título principal `Montserrat`
+- Título secundário `Open Sans`
 
-Em todas com a fonte "sans-serif" declarada como contingência.
+Em todas com a fonte `sans-serif` declarada como contingência.
 
-As fontes são declaradas em ":roots" dentro do arquivo "css/styles.css" e utilizadas ao longo do código através das **variáveis**.
+As fontes são declaradas em `:roots` dentro do arquivo `css/styles.css` e utilizadas ao longo do código através das **variáveis**.
 
-Com os pesos "700" para negrito e "400" para normal.
+Com os pesos `700` para negrito e `400` para normal.
