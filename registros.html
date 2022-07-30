@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Registre suas evoluções - Nome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="css/styles.css"
+      href="css/geral/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/geral/styles.css"
     />
     <link
       rel="stylesheet"
@@ -17,9 +23,70 @@
       media="screen"
       href="css/registros.css"
     />
+    <script
+      src="https://kit.fontawesome.com/9f458f6222.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <script src="js/registerOpen.js"></script>
+    <header>
+      <!-- Placeholder para o menu -->
+      <div
+        style="
+          background-color: gray;
+          text-align: right;
+          width: 100vw;
+          height: 60px;
+        "
+      >
+        <a href="index.html"> Voltar </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="registros__container-titulo">
+        <h2 class="registros__titulo">Registros da sua evolução</h2>
+        <p class="registros__texto">
+          Registre aqui todas as suas evoluções e mantenha melhor visibilidade
+          do caminho a seguir, além de compartilhar com seus contatos como está
+          evoluindo.
+        </p>
+      </div>
+      <nav class="registros__menu">
+        <div class="registros__container-menu">
+          <button class="registros__botao registros__botao--medidas">
+            <i class="fa-solid fa-ruler"></i>Novas <br />
+            Medidas
+          </button>
+          <button class="registros__botao registros__botao--laboratorio">
+            <i class="fa-solid fa-flask-vial"></i>Novo <br />
+            Resultado Laboratório
+          </button>
+          <button class="registros__botao registros__botao--composicao">
+            <i class="fa-solid fa-person"></i>Nova <br />
+            Composição Corporal
+          </button>
+          <button class="registros__botao registros__botao--fotos">
+            <i class="fa-solid fa-camera"></i>Novas <br />
+            Fotos
+          </button>
+          <button class="registros__botao registros__botao--protocolos">
+            <i class="fa-solid fa-list-check"></i>Novos <br />
+            Protocolos
+          </button>
+          <button class="registros__botao registros__botao--filtro">
+            <i class="fa-solid fa-filter"></i>Filtrar
+          </button>
+        </div>
+      </nav>
+      <section>
+        <ul class="registros__lista">
+          <li class="registros__item">Tipo Quantidade Data Editar Remover</li>
+          <li class="registros__item">Tipo Quantidade Data Editar Remover</li>
+        </ul>
+      </section>
+    </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>

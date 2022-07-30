@@ -28,6 +28,8 @@ Os ícones padrão na página são:
 - Ícone Registro de Laboratório `<i class="fa-solid fa-flask-vial"></i>`
 - Ícone Registro de Composição corporal `<i class="fa-solid fa-person"></i>`
 - Ícone Registro de Fotos `<i class="fa-solid fa-camera"></i>`
+- Ícone Registro de Medidas `<i class="fa-solid fa-ruler"></i>`
+- Ícone Registro de Protocolos `<i class="fa-solid fa-list-check"></i>`
 
 - Ícone de Filtro simples `<i class="fa-solid fa-filter"></i>`
 - Ícone de Filtro múltiplo `<i class="fa-solid fa-filters"></i>`
