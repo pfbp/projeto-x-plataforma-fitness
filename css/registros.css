@@ -1,33 +1,30 @@
-.registros__container-titulo {
-  padding: 1.5rem;
+/* Estilos do cabeçalho */
+.registros__container-cabecalho {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 1rem;
 }
 
-.registros__titulo {
+.registros__container-titulo {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-.registros__texto {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.registros__menu {
-  border-bottom: 1px solid gray;
-  margin: 1rem;
-  padding-bottom: 1rem;
 }
 
 .registros__container-menu {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .registros__botao {
   background-color: transparent;
   border: 1px solid black;
   color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .registros__botao:hover {
@@ -36,31 +33,125 @@
   color: white;
 }
 
+/* Responsividade do cabeçalho */
+@media screen and (min-width: 1024px) {
+  .registros__botao {
+    border-radius: 3px;
+    margin: 0 0.3rem;
+    width: 130px;
+    height: 40px;
+  }
+
+  .registros__botao i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos da lista */
 .registros__lista {
   background-color: lightgray;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0 auto;
-  width: 97vw;
 }
 
 .registros__item {
   background-color: white;
   border: 0.5px solid gray;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px 0.5px gray;
   display: flex;
-  height: 50px;
-  margin: 0.3rem 0.3rem 0 0.3rem;
-  width: calc(100%-0.6rem);
 }
 
+/* Responsividade da lista */
 @media screen and (min-width: 1024px) {
-  .registros__botao {
-    border-radius: 3px;
-    margin: 0 1rem;
-    width: 150px;
+  .registros__lista {
+    border-radius: 10px;
+    height: 100vh;
+    margin: 0 auto 0.5rem;
+    width: 97vw;
   }
+
+  .registros__item {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0.5px gray;
+    height: 50px;
+    margin: 0.3rem 0.3rem 0 0.3rem;
+    width: calc(100%-0.6rem);
+  }
+}
+
+.registros__navLista {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.registros__navButao {
+  background-color: transparent;
+  border: transparent;
+  color: black;
+  margin: 1rem;
+}
+
+.registros__navButao--previous,
+.registros__navButao--next {
+  font-size: 1.5rem;
+}
+
+/* Estilo modal geral */
+.registros__modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+/* Estilo modal de medidas */
+.registros__medidas {
+  background-color: white;
+  display: none;
+  height: 70vh;
+  margin: auto auto;
+  width: 60vw;
+}
+
+/*Estilo modal de laboratorio*/
+.registros__laboratorio {
+  background-color: white;
+  display: none;
+  height: 70vh;
+  margin: auto auto;
+  width: 60vw;
+}
+
+/*Estilo modal de composição corporal*/
+.registros__composicao {
+  background-color: white;
+  display: none;
+  height: 70vh;
+  margin: auto auto;
+  width: 60vw;
+}
+
+/*Estilo modal de fotos*/
+.registros__fotos {
+  background-color: white;
+  display: none;
+  height: 70vh;
+  margin: auto auto;
+  width: 60vw;
+}
+
+/*Estilo modal de protocolos*/
+.registros__protocolos {
+  background-color: white;
+  display: none;
+  height: 70vh;
+  margin: auto auto;
+  width: 60vw;
+}
+
+.registros__modal--ativo {
+  display: flex;
 }

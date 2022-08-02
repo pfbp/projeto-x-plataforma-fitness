@@ -9,13 +9,13 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="css/geral/reset.css"
+      href="css/reset.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="css/geral/styles.css"
+      href="css/styles.css"
     />
     <link
       rel="stylesheet"
@@ -29,64 +29,177 @@
     ></script>
   </head>
   <body>
-    <header>
-      <!-- Placeholder para o menu -->
+    <header class="mainHeader">
+      <div class="mainHeader__Logo">
+        <span class="mainLogo"> Logo Placeholder </span>
+      </div>
+      <ul class="mainHeader__Menu">
+        <li><a href="perfil.html" class="mainMenu__item mainMenu__item--perfil">Meu Perfil</a></li>
+        <li><a href="contatos.html" class="mainMenu__item mainMenu__item--contatos">Meus Contatos</a></li>
+        <li><a href="registros.html" class="mainMenu__item mainMenu__item--registros">Registros</a></li>
+        <li><a href="protocolos.html" class="mainMenu__item mainMenu__item--protocolos">Protocolos</a></li>
+        <li><a href="customizar.html" class="mainMenu__item mainMenu__item--customizar"></a>Customizar</li>
+      </div>
+      <div class="mainHeader__Login">
+        <button class="mainLogin__butao">Log In</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="registros__container-cabecalho">
+        <h2 class="registros__container-titulo">Registros da sua evolução</h2>
+        <nav class="registros__container-menu">
+          <button class="registros__botao registros__botao--medidas">
+            <i class="fa-solid fa-ruler"></i>
+            <p>
+              + Medidas
+            </p>
+          </button>
+          <button class="registros__botao registros__botao--laboratorio">
+            <i class="fa-solid fa-flask-vial"></i>
+            <p>
+              + Resultado <br />
+              Laboratório
+            </p>
+          </button>
+          <button class="registros__botao registros__botao--composicao">
+            <i class="fa-solid fa-person"></i>
+            <p>
+              + Composição <br />
+              Corporal
+            </p>
+          </button>
+          <button class="registros__botao registros__botao--fotos">
+            <i class="fa-solid fa-camera"></i>
+            <p>
+              + Fotos
+            </p>
+          </button>
+          <button class="registros__botao registros__botao--protocolos">
+            <i class="fa-solid fa-list-check"></i>
+            <p>
+              + Protocolos
+            </p>
+          </button>
+          <button class="registros__botao registros__botao--filtro">
+            <i class="fa-solid fa-filter"></i>
+            <p>Filtrar</p>
+          </button>
+        </nav>
+      </section>
+      <section>
+        <ul class="registros__lista">
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+          <li class="registros__item">
+            Tipo Status Quantidade Data Prazo Editar Remover
+          </li>
+        </ul>
+        <nav class="registros__navLista">
+          <button class="registros__navButao registros__navButao--previous">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+          </button>
+          <button class="registros__navButao registros__navButao--item1">
+            <i class="fa-solid fa-circle"></i>
+          </button>
+          <button class="registros__navButao registros__navButao--item2">
+            <i class="fa-solid fa-circle"></i>
+          </button>
+          <button class="registros__navButao registros__navButao--item3">
+            <i class="fa-solid fa-circle"></i>
+          </button>
+          <button class="registros__navButao registros__navButao--next">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </button>
+        </nav>
+      </section>
+    </main>
+
+    <!--Modais de entrada de registro-->
+    <!--Registro de medidas-->
+    <section class="registros__modal">
+      <div class="registros__medidas">
+        <h2>Registro de Medidas</h2>
+        <button class="registros__modal--close">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de laboratório-->
+    <section class="registros__modal">
+      <div class="registros__laboratorio">
+        <h2>Registros de Resultado de Laboratório</h2>
+        <button class="registros__modal--close">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de Composição Corporal-->
+    <section class="registros__modal">
+      <div class="registros__composicao">
+        <h2>Registros de Composição Corporal</h2>
+        <button class="registros__modal--close">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de Fotos-->
+    <section class="registros__modal">
+      <div class="registros__fotos">
+        <h2>Registros de Fotos</h2>
+        <button class="registros__modal--close">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de Protocolos-->
+    <section class="registros__modal">
+      <div class="registros__protocolos">
+        <h2>Registros de Protocolos</h2>
+        <button class="registros__modal--close">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <footer>
+      <!-- Placeholder para o rodapé -->
       <div
         style="
           background-color: gray;
           text-align: right;
-          width: 100vw;
+          width: 100%;
           height: 60px;
         "
       >
         <a href="index.html"> Voltar </a>
       </div>
-    </header>
-
-    <main>
-      <div class="registros__container-titulo">
-        <h2 class="registros__titulo">Registros da sua evolução</h2>
-        <p class="registros__texto">
-          Registre aqui todas as suas evoluções e mantenha melhor visibilidade
-          do caminho a seguir, além de compartilhar com seus contatos como está
-          evoluindo.
-        </p>
-      </div>
-      <nav class="registros__menu">
-        <div class="registros__container-menu">
-          <button class="registros__botao registros__botao--medidas">
-            <i class="fa-solid fa-ruler"></i>Novas <br />
-            Medidas
-          </button>
-          <button class="registros__botao registros__botao--laboratorio">
-            <i class="fa-solid fa-flask-vial"></i>Novo <br />
-            Resultado Laboratório
-          </button>
-          <button class="registros__botao registros__botao--composicao">
-            <i class="fa-solid fa-person"></i>Nova <br />
-            Composição Corporal
-          </button>
-          <button class="registros__botao registros__botao--fotos">
-            <i class="fa-solid fa-camera"></i>Novas <br />
-            Fotos
-          </button>
-          <button class="registros__botao registros__botao--protocolos">
-            <i class="fa-solid fa-list-check"></i>Novos <br />
-            Protocolos
-          </button>
-          <button class="registros__botao registros__botao--filtro">
-            <i class="fa-solid fa-filter"></i>Filtrar
-          </button>
-        </div>
-      </nav>
-      <section>
-        <ul class="registros__lista">
-          <li class="registros__item">Tipo Quantidade Data Editar Remover</li>
-          <li class="registros__item">Tipo Quantidade Data Editar Remover</li>
-        </ul>
-      </section>
-    </main>
-
+    </footer>
+    <script src="js/registros.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
