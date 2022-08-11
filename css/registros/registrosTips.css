@@ -1,0 +1,32 @@
+.registros__tips-container {
+  align-items: flex-start;
+  background-color: var(--bg-tips);
+  color: var(--text-tips);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 100px;
+  width: 100%;
+}
+
+.registros__tips {
+  box-sizing: border-box;
+  line-height: 1rem;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  width: 95%;
+}
+
+.registrosTips__listaItens {
+  margin-left: 3rem;
+}
+
+.registrosTips__fechar {
+  text-align: center;
+  width: 5%;
+}
+
+.registrosTips__esconder {
+  display: none;
+}
