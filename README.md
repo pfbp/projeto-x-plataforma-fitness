@@ -40,6 +40,8 @@ Os ícones padrão na página são:
 - Ícone de Contatos `<i class="fa-solid fa-user-group"></i>`
 - Ícone de Adicionar contatos `<i class="fa-solid fa-user-plus"></i>`
 
+- Ícone de Usuário `<i class="fa-solid fa-circle-user"></i>`
+
 ---
 
 ## Fonte utilizada:

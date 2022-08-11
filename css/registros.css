@@ -1,24 +1,59 @@
-/* Estilos do cabeçalho */
-.registros__container-cabecalho {
+/* Estilos do Tips */
+.registros__tips-container {
+  align-items: flex-start;
+  background-color: var(--bg-tips);
+  color: var(--text-tips);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 100px;
+  width: 100%;
+}
+
+.registros__tips {
+  box-sizing: border-box;
+  line-height: 1rem;
   padding: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  width: 95%;
+}
+
+.registrosTips__listaItens {
+  margin-left: 3rem;
+}
+
+.registrosTips__fechar {
+  text-align: center;
+  width: 5%;
+}
+
+.registrosTips__esconder {
+  display: none;
+}
+
+/* Estilos do cabeçalho */
+.registros__header-container {
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid gray;
   margin-bottom: 1rem;
 }
 
-.registros__container-titulo {
-  font-size: 2rem;
+.registros__titulo {
+  font-size: 1.5rem;
   font-weight: 700;
+  padding-right: 0.3rem;
 }
 
-.registros__container-menu {
+.registros__menu {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-.registros__botao {
+.registrosMenu__item {
   background-color: transparent;
   border: 1px solid black;
   color: black;
@@ -27,7 +62,7 @@
   align-items: center;
 }
 
-.registros__botao:hover {
+.registrosMenu__item:hover {
   background-color: black;
   border: 1px solid white;
   color: white;
@@ -35,14 +70,14 @@
 
 /* Responsividade do cabeçalho */
 @media screen and (min-width: 1024px) {
-  .registros__botao {
+  .registrosMenu__item {
     border-radius: 3px;
     margin: 0 0.3rem;
     width: 130px;
     height: 40px;
   }
 
-  .registros__botao i {
+  .registrosMenu__item i {
     font-size: 1.2rem;
   }
 }
@@ -54,7 +89,7 @@
   flex-direction: column;
 }
 
-.registros__item {
+.registrosLista__item {
   background-color: white;
   border: 0.5px solid gray;
   display: flex;
@@ -69,7 +104,7 @@
     width: 97vw;
   }
 
-  .registros__item {
+  .registrosLista__item {
     border-radius: 5px;
     box-shadow: 0 2px 5px 0.5px gray;
     height: 50px;
@@ -78,21 +113,21 @@
   }
 }
 
-.registros__navLista {
+.registrosLista__nav {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
-.registros__navButao {
+.registrosLista__navItem {
   background-color: transparent;
   border: transparent;
   color: black;
   margin: 1rem;
 }
 
-.registros__navButao--previous,
-.registros__navButao--next {
+.registrosLista__navItem--previous,
+.registrosLista__navItem--next {
   font-size: 1.5rem;
 }
 

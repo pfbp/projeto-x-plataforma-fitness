@@ -1,29 +1,82 @@
-.mainHeader {
-  background-color: gray;
+:root {
+  --bg-menu: rgb(145, 145, 145);
+  --bg-main: rgb(255, 255, 255);
+  --bg-tips: rgb(40, 40, 110);
+  --text-tips: rgb(200, 200, 200);
+  --text-menu: #000000;
+  --hover-menu: rgb(222, 184, 135);
+}
+
+/* Estilos geral */
+body {
+  background-color: var(--bg-main);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Cabecalho principal */
+.header-container {
+  align-items: center;
+  background-color: var(--bg-menu);
   display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.mainHeader__Logo {
-  background-color: white;
-  height: 20px;
-  width: 40px;
+.header__logo {
+  background-color: var(--bg-main);
+  height: 50px;
+  margin-left: 1rem;
+  width: 130px;
 }
 
-.mainHeader__Menu {
+.header__menu {
+  align-items: center;
   display: Flex;
+  justify-content: space-around;
   list-style: none;
+  margin-right: 1rem;
 }
 
-.mainMenu__item {
-  color: black;
+.menu__item {
+  color: var(--text-menu);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-.mainHeader__Login {
-  display: flex;
+.menu__item:hover {
+  border-left: 7px solid var(--hover-menu);
+  color: var(--hover-menu);
+  font-size: 1rem;
+  padding-left: 1rem;
 }
 
-.mainLogin__button {
-  border: none;
+.header__login {
   background-color: transparent;
+  border: none;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.header__login--imagem {
+  margin: 0.5rem;
+}
+
+.header__login--usuario {
+  margin: 0.5rem;
+}
+
+/* Rodapé principal */
+.footer-container {
+  background-color: var(--bg-menu);
+  display: flex;
+  height: 20px;
+  width: 100%;
 }
