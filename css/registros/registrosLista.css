@@ -4,7 +4,26 @@
   flex-direction: column;
 }
 
-.registrosLista__item {
+.registros__lista--cabecalho {
+  display: flex;
+  justify-content: stretch;
+}
+
+.registros__lista--itemCabecalho {
+  border: 0.5px solid black;
+  font-weight: 700;
+  flex-grow: 1;
+  padding: 0.5rem 0;
+}
+
+.registros__lista--itemCabecalho:first-child {
+  border-radius: 10px 0 0 0;
+}
+.registros__lista--itemCabecalho:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.registrosLista__linha {
   background-color: white;
   border: 0.5px solid gray;
   display: flex;

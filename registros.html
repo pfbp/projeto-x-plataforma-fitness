@@ -52,6 +52,7 @@
   </head>
 
   <body>
+    <!-- Cabeçalho com logo, menu e Login -->
     <header class="header-container">
       <h1 class="header__logo">
         <span> Logo Placeholder </span>
@@ -70,8 +71,10 @@
       </div>
     </header>
 
+    <!-- Início corpo da página -->
     <main>
-      <section class="registros__tips-container">
+      <!-- Tips -->
+      <section class="registros__tips-container" id="RegistrosTips">
         <div class="registros__tips registros__tips--dica1">
           <p> Você pode registrar:<br></p>
           <ul class="registrosTips__listaItens">
@@ -88,58 +91,52 @@
         <div class="registros__tips registros__tips--dica3 registrosTips__esconder">
           <p> Texto da dica 3</p>
         </div>
-        <button class="registrosTips__fechar"> X </button>
-        <nav class="registrosLista__nav">
-            <button class="registrosLista__navItem registrosLista__navItem--previous">
+        <button class="registrosTips__fechar" onclick="fechaTips()"> X </button>
+        <nav class="registrosTips__nav">
+            <button class="registrosTips__navItem">
               <i class="fa-solid fa-circle-chevron-left"></i>
             </button>
-            <button class="registrosLista__navItem registrosLista__navItem--item1">
-              <i class="fa-solid fa-circle"></i>
-            </button>
-            <button class="registrosLista__navItem registrosLista__navItem--item2">
-              <i class="fa-solid fa-circle"></i>
-            </button>
-            <button class="registrosLista__navItem registrosLista__navItem--item3">
-              <i class="fa-solid fa-circle"></i>
-            </button>
-            <button class="registrosLista__navItem registrosLista__navItem--next">
+            <span class="registrosTips__navItem" id="numeroNavTips">1 / 3</span>
+            <button class="registrosTips__navItem">
               <i class="fa-solid fa-circle-chevron-right"></i>
             </button>
           </nav>
       </section>
+
+      <!-- Cabeçalho do título e barramento de botões de registros-->
       <section class="registros__header-container">
         <h2 class="registros__titulo">Registros da sua evolução</h2>
         <nav class="registros__menu">
-          <button class="registrosMenu__item registrosMenu__item--medidas">
+          <button class="registrosMenu__item" onclick="abreModalMedida()">
             <i class="fa-solid fa-ruler"></i>
             <p>
-              + Medidas
+              + Medida
             </p>
           </button>
-          <button class="registrosMenu__item registrosMenu__item--laboratorio">
+          <button class="registrosMenu__item" onclick="abreModalLaboratorio()">
             <i class="fa-solid fa-flask-vial"></i>
             <p>
               + Resultado <br />
               Laboratório
             </p>
           </button>
-          <button class="registrosMenu__item registrosMenu__item--composicao">
+          <button class="registrosMenu__item" onclick="abreModalComposicao()">
             <i class="fa-solid fa-person"></i>
             <p>
               + Composição <br />
               Corporal
             </p>
           </button>
-          <button class="registrosMenu__item registrosMenu__item--fotos">
+          <button class="registrosMenu__item" onclick="abreModalImagem()">
             <i class="fa-solid fa-camera"></i>
             <p>
-              + Fotos
+              + Imagem
             </p>
           </button>
-          <button class="registrosMenu__item registrosMenu__item--protocolos">
+          <button class="registrosMenu__item" onclick="abreModalProtocolo()">
             <i class="fa-solid fa-list-check"></i>
             <p>
-              + Protocolos
+              + Protocolo
             </p>
           </button>
           <button class="registrosMenu__item registrosMenu__item--filtro">
@@ -148,113 +145,101 @@
           </button>
         </nav>
       </section>
+
+      <!-- Tabela de registros -->
       <section>
-        <ul class="registros__lista">
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-          <li class="registrosLista__item">
-            Tipo Status Quantidade Data Prazo Editar Remover
-          </li>
-        </ul>
-        <nav class="registrosLista__nav">
-          <button class="registrosLista__navItem registrosLista__navItem--previous">
-            <i class="fa-solid fa-circle-chevron-left"></i>
-          </button>
-          <button class="registrosLista__navItem registrosLista__navItem--item1">
-            <i class="fa-solid fa-circle"></i>
-          </button>
-          <button class="registrosLista__navItem registrosLista__navItem--item2">
-            <i class="fa-solid fa-circle"></i>
-          </button>
-          <button class="registrosLista__navItem registrosLista__navItem--item3">
-            <i class="fa-solid fa-circle"></i>
-          </button>
-          <button class="registrosLista__navItem registrosLista__navItem--next">
-            <i class="fa-solid fa-circle-chevron-right"></i>
-          </button>
-        </nav>
+        <table class="registros__lista" id="listaRegistros">
+          <thead><tr class="registros__lista--cabecalho">
+            <th class="registros__lista--itemCabecalho">Tipo</th>
+            <th class="registros__lista--itemCabecalho">Data</th>
+            <th class="registros__lista--itemCabecalho">Status</th>
+            <th class="registros__lista--itemCabecalho">Quantidade</th>
+            <th class="registros__lista--itemCabecalho">Prazo</th>
+            <th class="registros__lista--itemCabecalho">Comandos</th>
+          </tr></thead>
+          <tbody> </tbody>
+
+          
+          </table>
       </section>
     </main>
 
     <!--Modais de entrada de registro-->
     <!--Registro de medidas-->
-    <section class="registros__modal">
-      <div class="registros__medidas">
-        <h2>Registro de Medidas</h2>
-        <button class="registros__modal--close">X</button>
-        <p>Texto de teste</p>
+    <section class="registros__modal" id="modalNovaMedida">
+      <div class="registrosModal__container">
+        <form class="registrosModal__form" onsubmit="registrosController.adiciona(event)">
+          <div class="registrosModal__header">
+            <h2 class="registrosModal__titulo">Registro de Medidas</h2>
+            <input type="date" placeholder="DD/MM/AAAA" class="registrosModal__date">
+            <button>Mais itens</button>
+            <button class="registros__modal--close" onclick="fechaModalMedida(event)">X</button>
+          </div>
+          <div class="registrosModal__lista">
+            <div class="registrosModal__item">
+              <input type="text" placeholder="Escolha um item...">
+              <input type="number" placeholder="0.0">
+              <input type="date" placeholder="dd/mm/aaaa">
+              <button>Remover</button>
+            </div>
+          </div>
+          <div class="registrosModal__footer">
+            <button class="registrosModal__submit">Submeter</button>
+          </div>
+        </form>
       </div>
     </section>
 
     <!--Registro de laboratório-->
-    <section class="registros__modal">
-      <div class="registros__laboratorio">
-        <h2>Registros de Resultado de Laboratório</h2>
-        <button class="registros__modal--close">X</button>
+    <section class="registros__modal" id="modalNovoLaboratorio">
+      <div class="registrosModal__container">
+        <h2>Registro de Resultados de Laboratório</h2>
+        <button class="registros__modal--close" onclick="fechaModalLaboratorio(event)">X</button>
         <p>Texto de teste</p>
       </div>
     </section>
 
     <!--Registro de Composição Corporal-->
-    <section class="registros__modal">
-      <div class="registros__composicao">
-        <h2>Registros de Composição Corporal</h2>
-        <button class="registros__modal--close">X</button>
+    <section class="registros__modal" id="modalNovaComposicao">
+      <div class="registrosModal__container">
+        <h2>Registro de Composição Corporal</h2>
+        <button class="registros__modal--close"  onclick="fechaModalComposicao(event)">X</button>
         <p>Texto de teste</p>
       </div>
     </section>
 
-    <!--Registro de Fotos-->
-    <section class="registros__modal">
-      <div class="registros__fotos">
-        <h2>Registros de Fotos</h2>
-        <button class="registros__modal--close">X</button>
+    <!--Registro de Imagens-->
+    <section class="registros__modal" id="modalNovaImagem">
+      <div class="registrosModal__container">
+        <h2>Registro de Imagens</h2>
+        <button class="registros__modal--close"  onclick="fechaModalImagem(event)">X</button>
         <p>Texto de teste</p>
       </div>
     </section>
 
     <!--Registro de Protocolos-->
-    <section class="registros__modal">
-      <div class="registros__protocolos">
-        <h2>Registros de Protocolos</h2>
-        <button class="registros__modal--close">X</button>
+    <section class="registros__modal" id="modalNovoProtocolo">
+      <div class="registrosModal__container">
+        <h2>Registro de Protocolos</h2>
+        <button class="registros__modal--close"  onclick="fechaModalProtocolo(event)">X</button>
         <p>Texto de teste</p>
       </div>
     </section>
 
     <footer class="footer-container">
-      <!-- Placeholder para o rodapé -->
       <div>
         <a href="index.html"> Voltar </a>
       </div>
     </footer>
     
-    <script src="js/registros.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/Model/RegistraMedida.js"></script>
+    <script src="js/Model/RegistraLaboratorio.js"></script>
+    <script src="js/Model/RegistraComposicao.js"></script>
+    <script src="js/Model/RegistraImagem.js"></script>
+    <script src="js/Model/RegistraProtocolo.js"></script>
+    <script src="js/View/ViewModalRegistros.js"></script>
+    <script src="js/View/ViewTipsRegistros.js"></script>
+    <script src="js/View/ViewRegistros.js"></script>
+    <script src="js/View/ViewMensagem.js"></script>
   </body>
 </html>
