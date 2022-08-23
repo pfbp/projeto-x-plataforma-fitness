@@ -7,10 +7,11 @@
 .registros__lista--cabecalho {
   display: flex;
   justify-content: stretch;
+  font-size: 0.8rem;
 }
 
 .registros__lista--itemCabecalho {
-  border: 0.5px solid black;
+  border: 0.5px solid darkgray;
   font-weight: 700;
   flex-grow: 1;
   padding: 0.5rem 0;

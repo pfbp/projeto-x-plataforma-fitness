@@ -1,8 +1,9 @@
 class registrosController {
   constructor() {
         
-    let $ = document.querySelector.bind(document);
-    this._inputData = $('#data');
+    this._inputData = document.querySelector('#data');
+    this._inputNome = document.querySelectorAll('#nome');
+    this._inputValor = document.querySelectorAll('#valor');
   }
 
   adiciona(event) {

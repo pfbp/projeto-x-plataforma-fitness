@@ -172,16 +172,19 @@
           <div class="registrosModal__header">
             <h2 class="registrosModal__titulo">Registro de Medidas</h2>
             <input type="date" placeholder="DD/MM/AAAA" class="registrosModal__date">
-            <button>Mais itens</button>
+            <span></span>
             <button class="registros__modal--close" onclick="fechaModalMedida(event)">X</button>
           </div>
           <div class="registrosModal__lista">
             <div class="registrosModal__item">
-              <input type="text" placeholder="Escolha um item...">
-              <input type="number" placeholder="0.0">
-              <input type="date" placeholder="dd/mm/aaaa">
-              <button>Remover</button>
+              <label for="nome">Item</label>
+              <input type="text" id="nome" placeholder="Escolha um item...">
+              <label for="valor">Valor</label>
+              <input type="number" id="valor" placeholder="0.0">
+              <span></span><span></span>
+              <button id="remover">Remover</button>
             </div>
+            <button class="registrosModal__maisItem" onclick="adicionaItemMedida(event)">Mais um item</button>
           </div>
           <div class="registrosModal__footer">
             <button class="registrosModal__submit">Submeter</button>

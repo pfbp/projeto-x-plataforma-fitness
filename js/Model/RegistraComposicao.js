@@ -1,29 +1,12 @@
 class RegistraComposicao {
-  constructor(usuario, medida, valor, data) {
-    this._usuario = usuario;
-    this._categoria = "composição";
-    this._medida = medida;
+  constructor(composicao, valor, idade, genero) {
+    this._composicao = composicao;
     this._valor = valor;
-    this._data = new Date(data.getTime());
-  }
-
-  get usuario() {
-    return this._usuario;
-  }
-
-  get categoria() {
-    return this._categoria;
-  }
-
-  get medida() {
-    return this._medida;
-  }
-
-  get valor() {
-    return this._valor;
-  }
-
-  get data() {
-    return new Date(this._data.getTime());
+    this._limiteSuperior = (composicao, idade, genero) => {
+      return limiteSuperiorComposicao(composicao, idade, genero);
+    };
+    this._limiteInferior = (composicao, idade, genero) => {
+      return limiteInferiorComposicao(composicao, idade, genero);
+    };
   }
 }

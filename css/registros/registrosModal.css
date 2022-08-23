@@ -59,6 +59,12 @@
   width: 95%;
 }
 
+.registrosModal__maisItem {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
 .registrosModal__footer {
   border-top: 0.5px solid black;
   box-sizing: border-box;
