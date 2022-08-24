@@ -1,23 +1,7 @@
-const $ = document.querySelector.bind(document);
-
-const modalNovaMedida = $("#modalNovaMedida");
 const modalNovoLaboratorio = $("#modalNovoLaboratorio");
 const modalNovaComposicao = $("#modalNovaComposicao");
 const modalNovaImagem = $("#modalNovaImagem");
 const modalNovoProtocolo = $("#modalNovoProtocolo");
-
-function abreModalMedida() {
-  modalNovaMedida.classList.add("registros__modal--ativo");
-  atualizaListaRemover();
-  desabilitaRemover();
-}
-function fechaModalMedida(event) {
-  event.preventDefault();
-  removeElementosExtras();
-  modalNovaMedida.classList.remove("registros__modal--ativo");
-  let form = document.querySelector(".registrosModal__form");
-  form.reset();
-}
 
 function abreModalLaboratorio() {
   modalNovoLaboratorio.classList.add("registros__modal--ativo");

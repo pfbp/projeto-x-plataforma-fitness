@@ -1,4 +1,4 @@
-const RegistrosTips = $("#RegistrosTips");
+const RegistrosTips = document.querySelector("#RegistrosTips");
 
 function fechaTips() {
   console.log("chamou função");

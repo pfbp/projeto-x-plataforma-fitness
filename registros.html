@@ -107,7 +107,7 @@
       <section class="registros__header-container">
         <h2 class="registros__titulo">Registros da sua evolução</h2>
         <nav class="registros__menu">
-          <button class="registrosMenu__item" onclick="abreModalMedida()">
+          <button class="registrosMenu__item" id="abreModalMedida">
             <i class="fa-solid fa-ruler"></i>
             <p>
               + Medida
@@ -168,23 +168,23 @@
     <!--Registro de medidas-->
     <section class="registros__modal" id="modalNovaMedida">
       <div class="registrosModal__container">
-        <form class="registrosModal__form" onsubmit="registrosController.adiciona(event)">
+        <form class="registrosModal__form" id="formRegistroMedidas">
           <div class="registrosModal__header">
             <h2 class="registrosModal__titulo">Registro de Medidas</h2>
-            <input type="date" placeholder="DD/MM/AAAA" class="registrosModal__date">
+            <input type="date" placeholder="DD/MM/AAAA" id="data" class="registrosModal__date">
             <span></span>
-            <button class="registros__modal--close" onclick="fechaModalMedida(event)">X</button>
+            <button class="registros__modal--close" id="fechaModalMedida">X</button>
           </div>
           <div class="registrosModal__lista">
             <div class="registrosModal__item">
               <label for="nome">Item</label>
-              <input type="text" id="nome" placeholder="Escolha um item...">
+              <select id="nome" name="nome"> </select>
               <label for="valor">Valor</label>
               <input type="number" id="valor" placeholder="0.0">
               <span></span><span></span>
               <button id="remover">Remover</button>
             </div>
-            <button class="registrosModal__maisItem" onclick="adicionaItemMedida(event)">Mais um item</button>
+            <button class="registrosModal__maisItem" id="adicionaItemMedida">Mais um item</button>
           </div>
           <div class="registrosModal__footer">
             <button class="registrosModal__submit">Submeter</button>
@@ -235,14 +235,22 @@
       </div>
     </footer>
     
+    <script src="js/View/ViewTipsRegistros.js"></script>
+    
     <script src="js/Model/RegistraMedida.js"></script>
+    <script src="js/Model/ListaRegistros.js"></script>
+    <script src="js/View/ViewModalMedida.js"></script>
+    <script src="js/Controller/medidaController.js"></script>
+
     <script src="js/Model/RegistraLaboratorio.js"></script>
     <script src="js/Model/RegistraComposicao.js"></script>
     <script src="js/Model/RegistraImagem.js"></script>
     <script src="js/Model/RegistraProtocolo.js"></script>
-    <script src="js/View/ViewModalRegistros.js"></script>
-    <script src="js/View/ViewTipsRegistros.js"></script>
+    
+    
     <script src="js/View/ViewRegistros.js"></script>
     <script src="js/View/ViewMensagem.js"></script>
+    <script src="js/Controller/registrosController.js"></script>
+    
   </body>
 </html>

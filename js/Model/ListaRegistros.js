@@ -1,7 +1,7 @@
 //Monta o registro de um tipo com várias entradas
 class CadastraRegistro {
-  constructor(usuario, data, tipo) {
-    this._data = new Date(data.getTime());
+  constructor(data, tipo) {
+    this._data = data;
     this._tipo = tipo;
     this._registros = [];
   }
