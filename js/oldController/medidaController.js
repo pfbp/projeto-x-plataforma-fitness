@@ -3,11 +3,11 @@ formRegistroMedidas.addEventListener("submit", adicionaRegistroMedida);
 
 function adicionaRegistroMedida(event) {
   event.preventDefault();
-  let data = document.querySelector("#data").value;
+  let data = document.querySelector("#dataMedida").value;
   let registro = new CadastraRegistro(data, "Medidas");
 
-  let nomes = document.querySelectorAll("#nome");
-  let valores = document.querySelectorAll("#valor");
+  let nomes = document.querySelectorAll("#nomeMedida");
+  let valores = document.querySelectorAll("#valorMedida");
 
   for (let i = 0; i < nomes.length; i++) {
     let nome = nomes[i].selectedOptions[0].value;

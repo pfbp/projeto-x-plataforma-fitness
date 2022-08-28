@@ -1,4 +1,3 @@
-atualizaRegistros();
 var registros;
 
 function atualizaRegistros() {
@@ -9,3 +8,5 @@ function registrosController(registro) {
   registros.adiciona(registro);
   console.log(registros);
 }
+
+atualizaRegistros();

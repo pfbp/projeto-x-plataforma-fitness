@@ -1,0 +1,4 @@
+.records {
+  --bg-color-records: white;
+  background-color: var(--bg-color-records);
+}

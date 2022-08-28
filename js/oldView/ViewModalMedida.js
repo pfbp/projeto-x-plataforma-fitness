@@ -8,7 +8,7 @@ botaoAbreModalMedida.addEventListener("click", () => {
   modalNovaMedida.classList.add("registros__modal--ativo");
   atualizaListaRemover();
   desabilitaRemover();
-  let item = document.querySelector("#nome");
+  let item = document.querySelector("#nomeMedida");
   preenchePossiveisMedidas(item);
 });
 
@@ -31,23 +31,23 @@ function adicionaItemMedida(event) {
 
   let child = document.createElement("label");
   child.textContent = "Item";
-  child.setAttribute("for", "nome");
+  child.setAttribute("for", "nomeMedida");
   novoElemento.appendChild(child);
 
   child = document.createElement("select");
-  child.setAttribute("id", "nome");
+  child.setAttribute("id", "nomeMedida");
   child.setAttribute("name", "nome");
   preenchePossiveisMedidas(child);
   novoElemento.appendChild(child);
 
   child = document.createElement("label");
   child.textContent = "Valor";
-  child.setAttribute("for", "valor");
+  child.setAttribute("for", "valorMedida");
   novoElemento.appendChild(child);
 
   child = document.createElement("input");
   child.setAttribute("type", "number");
-  child.setAttribute("id", "valor");
+  child.setAttribute("id", "valorMedida");
   child.setAttribute("placeholder", "0.0");
   novoElemento.appendChild(child);
 
@@ -57,7 +57,7 @@ function adicionaItemMedida(event) {
   novoElemento.appendChild(child);
 
   child = document.createElement("button");
-  child.setAttribute("id", "remover");
+  child.setAttribute("id", "removerMedida");
   child.textContent = "Remover";
   novoElemento.appendChild(child);
 
@@ -72,7 +72,7 @@ function adicionaItemMedida(event) {
 
 //Manipulando o botão de remover item da lista
 function atualizaListaRemover() {
-  let buttonRemover = document.querySelectorAll("#remover");
+  let buttonRemover = document.querySelectorAll("#removerMedida");
   for (let i = 0; i < buttonRemover.length; i++) {
     buttonRemover[i].addEventListener("click", removeItemMedida);
   }
@@ -81,13 +81,13 @@ function atualizaListaRemover() {
 function desabilitaRemover() {
   let itensLista = document.querySelectorAll(".registrosModal__item");
   if (itensLista.length === 1) {
-    let buttonRemover = document.querySelectorAll("#remover");
+    let buttonRemover = document.querySelectorAll("#removerMedida");
     buttonRemover[0].setAttribute("disabled", "");
   }
 }
 
 function habilitaRemover() {
-  let buttonRemover = document.querySelectorAll("#remover");
+  let buttonRemover = document.querySelectorAll("#removerMedida");
   if (buttonRemover.length !== 1) {
     for (let i = 0; i < buttonRemover.length; i++) {
       buttonRemover[i].removeAttribute("disabled");

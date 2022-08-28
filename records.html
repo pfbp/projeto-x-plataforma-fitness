@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Track on your evolution! - Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Work your shape, record your evolutions, share with your connections, encourage your friends! Evolve!"
+    />
+
+    <!--stylesheets css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/main/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/main/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/main/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/main/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/main/tips.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/records/recordsMain.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/records/recordsHeader.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/records/recordsList.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/records/recordsModal.css"
+    />
+
+    <!--external fonts-->
+    <script
+      src="https://kit.fontawesome.com/9f458f6222.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--internal javascript-->
+    <script defer src="js/View/tipsView.js"></script>
+  </head> 
+  
+  <body>
+
+    <!--Header-->
+    <header class="header">
+      <!--Logo area-->
+      <div class="header__left">
+        <img src="#" class="header__logo" alt="Logo" />
+      </div>
+
+      <!--Center area-->
+      <div class="header__center"></div>
+
+      <!--Menu area-->
+      <div class="header__right">
+        <nav class="header__nav">
+          <ul class="header__nav--list">
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Profile</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Conections</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Records</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Dashboard</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Configuration</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__login">
+          <img src="#" class="header__login--image" />
+          <span class="header__login--text">Log in</span>
+        </button>
+      </div>
+    </header>
+
+    <!--main content-->
+    <main>
+      <!--content for tips to the user-->
+      <section class="tips">
+        <div class="tips__header">
+          <span></span>
+          <h3 class="tips__header--title">Title of the tips</h3>
+          <button class="tips__header--close" id="closeTips">X</button>
+        </div>
+
+        <!--First tip-->
+        <div class="tips__body tips__active">
+          <div class="tips__body--left">
+            <p>
+              (1) Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries.
+            </p>
+          </div>
+          <div class="tips__body--right">
+            <p>
+              But also the leap into electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the
+              release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop publishing software like Aldus
+              PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+
+        <!--Second tip-->
+        <div class="tips__body">
+          <div class="tips__body--unique">
+            <p>
+              (2) Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries.
+            </p>
+          </div>
+        </div>
+
+        <!--Third tip-->
+        <div class="tips__body">
+          <div class="tips__body--left">
+              <p>
+                (3) Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has
+                survived not only five centuries.
+              </p>
+            </div>
+            <div class="tips__body--right">
+              <p>
+                But also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and
+                more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div>
+        </div>
+
+        <!--Navigation between numbered tips-->
+        <nav class="tips__nav">
+          <ul>
+            <li class="tips__nav--item">
+              <button class="tips__nav--button" id="previousTip">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+              </button>
+            </li>
+            <li class="tips__nav--item">
+              <p class="tips__nav--counter" id="counterTips">0 / 0</p>
+            </li>
+            <li class="tips__nav--item">
+              <button class="tips__nav--button" id="nextTip">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!--content for the header of records-->
+      <section class="records">
+        <div class="records__header">
+          <h2 class="records__title">Record your evolution</h2>
+          <nav class="records__nav">
+            <button class="records__nav--item" id="newMeasureButton"><span><i class="fa-solid fa-ruler"></i></span><span>New<br />Measure</button>
+            <button class="records__nav--item" id="newLaboratoryButton"><span><i class="fa-solid fa-flask-vial"></i></span><span>New<br />Laboratory</button>
+            <button class="records__nav--item" id="newCompositionButton"><span><i class="fa-solid fa-person"></i></span><span>New<br />Composition</button>
+            <button class="records__nav--item" id="newProtocolButton"><span><i class="fa-solid fa-list-check"></i></span><span>New<br />Protocol</button>
+            <button class="records__nav--item" id="newImageButton"><span><i class="fa-solid fa-camera"></i></span><span>New<br />Image</button>
+            <button class="records__nav--item records__nav--filter" id="filterButton"><span><i class="fa-solid fa-filter"></i></span>
+              <span>Filter</span>
+            </button>
+          </nav>
+        </div>
+
+        <!--list of records-->
+        <div>
+          <table class="records__list">
+            <!--header of the table-->
+            <thead class="records__list--header">
+              <tr>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Records</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+
+            <!--lines of list of records-->
+            <tbody class="records__list--body">
+              <tr class="records__list--item">
+                <td>Measure</td>
+                <td>2020-01-01</td>
+                <td>8</td>
+                <td>
+                  <button><i class="fa-solid fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+
+    <!--Modal for input windows-->
+    <section class="register__modal fade" id="registerModal">
+      <div class="register__modal--dialog">
+        <div class="register__modal--content">
+          <div class="register__modal--header">
+            <h2 class="register__modal--title">Title</h2>
+            <button class="register__modal--close">X</button>
+          </div>
+          <div class="register__modal--body">
+          </div>
+          <div class="register__modal--footer">
+            <button class="register__modal--submit"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

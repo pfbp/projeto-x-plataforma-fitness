@@ -1,0 +1,97 @@
+.tips {
+  --bg-color-tips: #13c8f5;
+  --height-tips: 150px;
+  --size-tips-nav: 1.3rem;
+  --size-tips-title: 1.3rem;
+  --color-tips-close-hover: #444444;
+  background-color: var(--bg-color-tips);
+  box-sizing: border-box;
+  height: var(--height-tips);
+}
+
+.tips__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tips__header--title {
+  font-size: var(--size-tips-title);
+  padding: 0.2rem 0;
+}
+
+.tips__header--close {
+  background-color: transparent;
+  border: 0;
+  padding: 0 1rem;
+}
+
+.tips__header--close:hover {
+  color: var(--color-tips-close-hover);
+}
+
+.tips__body {
+  align-items: center;
+  display: none;
+  height: 60%;
+  justify-content: stretch;
+  margin: 0;
+  width: 100%;
+}
+
+.tips__active {
+  display: flex;
+}
+
+.tips__body--left {
+  width: 50%;
+}
+
+.tips__body--left p {
+  padding: 0.5rem 2rem;
+  overflow-wrap: normal;
+}
+
+.tips__body--right {
+  width: 50%;
+}
+
+.tips__body--right p {
+  padding: 0.5rem 2rem;
+}
+
+.tips__body--unique {
+  align-self: center;
+  overflow-wrap: normal;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.tips__nav {
+  display: flex;
+  font-size: var(--size-tips-nav);
+  justify-content: center;
+  padding: 0.2rem 0;
+}
+
+.tips__nav--item {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.tips__nav--button {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+}
+
+.tips__nav--button i {
+  font-size: var(--size-tips-nav);
+}
+
+.tips__nav--counter {
+  display: inline-block;
+}
+
+.tips__hide {
+  display: none;
+}
