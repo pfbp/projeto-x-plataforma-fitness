@@ -30,3 +30,22 @@
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 }
+
+.records__modal--list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.records__modal--item {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0.5px gray;
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  justify-content: space-around;
+  margin: 0.5rem;
+  width: 95%;
+}

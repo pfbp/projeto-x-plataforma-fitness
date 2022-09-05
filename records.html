@@ -28,43 +28,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="css/main/header.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/main/footer.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/main/tips.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
       href="css/records/recordsMain.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/records/recordsHeader.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/records/recordsList.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/records/recordsModal.css"
     />
 
     <!--external fonts-->
@@ -81,151 +45,146 @@
 
     <!--internal javascript-->
     <script defer src="js/View/tipsView.js"></script>
+    <script type="module" src="js/Model/recordMeasure.js"></script>
+    <script type="module" src="js/View/recordsView.js"></script>
+    <script defer src="js/bootstrap/bootstrap.js"></script>
   </head> 
   
   <body>
-
-    <!--Header-->
-    <header class="header">
-      <!--Logo area-->
-      <div class="header__left">
-        <img src="#" class="header__logo" alt="Logo" />
-      </div>
-
-      <!--Center area-->
-      <div class="header__center"></div>
-
-      <!--Menu area-->
-      <div class="header__right">
-        <nav class="header__nav">
-          <ul class="header__nav--list">
-            <li class="header__nav--item">
-              <a href="#" class="header__nav--link">Profile</a>
-            </li>
-            <li class="header__nav--item">
-              <a href="#" class="header__nav--link">Conections</a>
-            </li>
-            <li class="header__nav--item">
-              <a href="#" class="header__nav--link">Records</a>
-            </li>
-            <li class="header__nav--item">
-              <a href="#" class="header__nav--link">Dashboard</a>
-            </li>
-            <li class="header__nav--item">
-              <a href="#" class="header__nav--link">Configuration</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header__login">
-          <img src="#" class="header__login--image" />
-          <span class="header__login--text">Log in</span>
-        </button>
-      </div>
+    <header>
+    <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Build Your Own Body</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Connections</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Records</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Configuration</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!--main content-->
     <main>
-      <!--content for tips to the user-->
-      <section class="tips">
-        <div class="tips__header">
-          <span></span>
-          <h3 class="tips__header--title">Title of the tips</h3>
-          <button class="tips__header--close" id="closeTips">X</button>
-        </div>
-
-        <!--First tip-->
-        <div class="tips__body tips__active">
-          <div class="tips__body--left">
-            <p>
-              (1) Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries.
-            </p>
-          </div>
-          <div class="tips__body--right">
-            <p>
-              But also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop publishing software like Aldus
-              PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-
-        <!--Second tip-->
-        <div class="tips__body">
-          <div class="tips__body--unique">
-            <p>
-              (2) Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries.
-            </p>
-          </div>
-        </div>
-
-        <!--Third tip-->
-        <div class="tips__body">
-          <div class="tips__body--left">
-              <p>
-                (3) Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries.
-              </p>
-            </div>
-            <div class="tips__body--right">
-              <p>
-                But also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus
-                PageMaker including versions of Lorem Ipsum.
-              </p>
-            </div>
-        </div>
-
-        <!--Navigation between numbered tips-->
-        <nav class="tips__nav">
-          <ul>
-            <li class="tips__nav--item">
-              <button class="tips__nav--button" id="previousTip">
-                <i class="fa-solid fa-circle-chevron-left"></i>
-              </button>
-            </li>
-            <li class="tips__nav--item">
-              <p class="tips__nav--counter" id="counterTips">0 / 0</p>
-            </li>
-            <li class="tips__nav--item">
-              <button class="tips__nav--button" id="nextTip">
-                <i class="fa-solid fa-circle-chevron-right"></i>
-              </button>
-            </li>
-          </ul>
+      <!--Tips corousel-->
+      <div id="carouselTips" class="carousel slide tips" data-bs-ride="true">
+        <!--Carousel navigation-->
+        <nav class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </nav>
-      </section>
+        <div class="carousel-inner">
+          <!--First content tip-->
+          <div class="carousel-item active">
+            <article class="tips__body">
+              <div class="tips__body--left">
+                <p>
+                  (1) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley of
+                  type and scrambled it to make a type specimen book. It has
+                  survived not only five centuries.
+                </p>
+              </div>
+              <div class="tips__body--right">
+                <p>
+                  But also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with the
+                  release of Letraset sheets containing Lorem Ipsum passages, and
+                  more recently with desktop publishing software like Aldus
+                  PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+            </article>
+          </div>
+          <!--Second content tip-->
+          <div class="carousel-item">
+            <article class="tips__body">
+              <div class="tips__body--unique">
+                <p>
+                  (2) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley of
+                  type and scrambled it to make a type specimen book. It has
+                  survived not only five centuries.
+                </p>
+              </div>
+            </article>
+          </div>
+          <!--Third content tip-->
+          <div class="carousel-item">
+            <article class="tips__body">
+                <div class="tips__body--left">
+                    <p>
+                      (3) Lorem Ipsum is simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the industry's standard dummy text
+                      ever since the 1500s, when an unknown printer took a galley of
+                      type and scrambled it to make a type specimen book. It has
+                      survived not only five centuries.
+                    </p>
+                  </div>
+                  <div class="tips__body--right">
+                    <p>
+                      But also the leap into electronic typesetting, remaining
+                      essentially unchanged. It was popularised in the 1960s with the
+                      release of Letraset sheets containing Lorem Ipsum passages, and
+                      more recently with desktop publishing software like Aldus
+                      PageMaker including versions of Lorem Ipsum.
+                    </p>
+                  </div>
+              </article>
+          </div>
+        </div>
+        <!--Carousel controls-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTips" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTips" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <button class="carousel-control-close" data-bs-target="#carouselTips" data-tip-close="closeTips">X</button>
+      </div>
 
       <!--content for the header of records-->
       <section class="records">
         <div class="records__header">
-          <h2 class="records__title">Record your evolution</h2>
-          <nav class="records__nav">
-            <button class="records__nav--item" id="newMeasureButton"><span><i class="fa-solid fa-ruler"></i></span><span>New<br />Measure</button>
-            <button class="records__nav--item" id="newLaboratoryButton"><span><i class="fa-solid fa-flask-vial"></i></span><span>New<br />Laboratory</button>
-            <button class="records__nav--item" id="newCompositionButton"><span><i class="fa-solid fa-person"></i></span><span>New<br />Composition</button>
-            <button class="records__nav--item" id="newProtocolButton"><span><i class="fa-solid fa-list-check"></i></span><span>New<br />Protocol</button>
-            <button class="records__nav--item" id="newImageButton"><span><i class="fa-solid fa-camera"></i></span><span>New<br />Image</button>
-            <button class="records__nav--item records__nav--filter" id="filterButton"><span><i class="fa-solid fa-filter"></i></span>
+          <h2 class="records__title">Record your Evolution</h2>
+          <nav class="btn-group records__nav" role="group" aria-label="Commands">
+            <button type="button" class="btn btn-light records__nav--item" data-bs-toggle="modal" data-bs-target="#registerModal" data-record="newRecord"><span><i class="fa-solid fa-circle-plus"></i></span><span>New<br />Record</button>
+            <button type="button" class="btn btn-light records__nav--item records__nav--filter" data-record="filter"><span><i class="fa-solid fa-filter"></i></span>
               <span>Filter</span>
             </button>
           </nav>
         </div>
-
+        <div class="records__filter records__filter--hide" id="recordsFilter">
+          filtros
+        </div>
+        
         <!--list of records-->
         <div>
           <table class="records__list">
@@ -256,18 +215,44 @@
     </main>
     <footer class="footer"></footer>
 
-    <!--Modal for input windows-->
-    <section class="register__modal fade" id="registerModal">
-      <div class="register__modal--dialog">
-        <div class="register__modal--content">
-          <div class="register__modal--header">
-            <h2 class="register__modal--title">Title</h2>
-            <button class="register__modal--close">X</button>
+    <!-- Modal -->
+    <section class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="register__modal--body">
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="records__modal--list" data-record-list="list">
+                <div class="col-md-6">
+                  <label for="inputDate" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="inputDate" placeholder="dd/mm/yyyy" aria-label="Date" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputType" class="form-label">Type</label>
+                  <select type="input" class="form-select" id="inputType" aria-label="Type" aria-describedby="basic-addon1">
+                    <option value="default" hidden selected>Choose</option>
+                    <option value="measure"> Measure </option>
+                    <option value="laboratoy"> Laboratory </option>
+                    <option value="composition"> Composition </option>
+                    <option value="protocol"> Protocol </option>
+                    <option value="media"> Media </option>
+                  </select>
+                </div>
+                <div class="valid-feedback">
+                  Record date is required
+                </div>
+                <div class="col-md-12" data-record-list="addButton">
+                  <button class="btn btn-light" type="button" data-record-list="addItem">Mais</button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="register__modal--footer">
-            <button class="register__modal--submit"></button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>

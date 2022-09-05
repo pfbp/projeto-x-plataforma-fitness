@@ -1,3 +1,7 @@
+@import "recordsHeader.css";
+@import "recordsList.css";
+@import "recordsModal.css";
+
 .records {
   --bg-color-records: white;
   background-color: var(--bg-color-records);
