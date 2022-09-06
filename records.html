@@ -88,84 +88,76 @@
 
     <!--main content-->
     <main>
+
       <!--Tips corousel-->
       <div id="carouselTips" class="carousel slide tips" data-bs-ride="true">
+        <span class="tips__reduced--icon"><i class="fa-regular fa-circle-question"></i></span>
+        
         <!--Carousel navigation-->
-        <nav class="carousel-indicators">
+        <nav class="carousel-indicators tips__inner">
           <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselTips" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </nav>
-        <div class="carousel-inner">
+        <div class="carousel-inner tips__inner">
           <!--First content tip-->
-          <div class="carousel-item active">
-            <article class="tips__body">
+          <article class="carousel-item active">
+            <div class="tips__body">
               <div class="tips__body--left">
                 <p>
                   (1) Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industry's standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book. It has
-                  survived not only five centuries.
+                  ever since the 1500s.
                 </p>
               </div>
               <div class="tips__body--right">
                 <p>
                   But also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and
-                  more recently with desktop publishing software like Aldus
-                  PageMaker including versions of Lorem Ipsum.
+                  essentially unchanged.
                 </p>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
           <!--Second content tip-->
-          <div class="carousel-item">
-            <article class="tips__body">
+          <article class="carousel-item">
+            <div class="tips__body">
               <div class="tips__body--unique">
                 <p>
                   (2) Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industry's standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book. It has
-                  survived not only five centuries.
+                  ever since the 1500s.
                 </p>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
           <!--Third content tip-->
-          <div class="carousel-item">
-            <article class="tips__body">
+          <article class="carousel-item">
+            <div class="tips__body">
                 <div class="tips__body--left">
                     <p>
                       (3) Lorem Ipsum is simply dummy text of the printing and typesetting
                       industry. Lorem Ipsum has been the industry's standard dummy text
-                      ever since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has
-                      survived not only five centuries.
+                      ever since the 1500s, when an unknown printer.
                     </p>
                   </div>
                   <div class="tips__body--right">
                     <p>
                       But also the leap into electronic typesetting, remaining
                       essentially unchanged. It was popularised in the 1960s with the
-                      release of Letraset sheets containing Lorem Ipsum passages, and
-                      more recently with desktop publishing software like Aldus
-                      PageMaker including versions of Lorem Ipsum.
+                      release of Letraset sheets containing Lorem Ipsum passages.
                     </p>
                   </div>
-              </article>
-          </div>
+              </div>
+          </article>
         </div>
         <!--Carousel controls-->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTips" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev tips__inner" type="button" data-bs-target="#carouselTips" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon tips__inner" aria-hidden="true"></span>
+          <span class="visually-hidden tips__inner">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselTips" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next tips__inner" type="button" data-bs-target="#carouselTips" data-bs-slide="next">
+          <span class="carousel-control-next-icon tips__inner" aria-hidden="true"></span>
+          <span class="visually-hidden tips__inner">Next</span>
         </button>
         <button class="carousel-control-close" data-bs-target="#carouselTips" data-tip-close="closeTips">X</button>
       </div>
@@ -174,15 +166,41 @@
       <section class="records">
         <div class="records__header">
           <h2 class="records__title">Record your Evolution</h2>
-          <nav class="btn-group records__nav" role="group" aria-label="Commands">
+          <nav class="records__nav" role="group" aria-label="Commands">
             <button type="button" class="btn btn-light records__nav--item" data-bs-toggle="modal" data-bs-target="#registerModal" data-record="newRecord"><span><i class="fa-solid fa-circle-plus"></i></span><span>New<br />Record</button>
             <button type="button" class="btn btn-light records__nav--item records__nav--filter" data-record="filter"><span><i class="fa-solid fa-filter"></i></span>
               <span>Filter</span>
             </button>
           </nav>
         </div>
+
+        <!--filter for the records list-->
         <div class="records__filter records__filter--hide" id="recordsFilter">
-          filtros
+          <div class="records__filter--container">
+            <label for="filterStart" class="form-label">Start</label>
+            <input type="date" class="form-control" id="filterStart" placeholder="dd/mm/yyyy" aria-label="Date" aria-describedby="basic-addon1" data-record-filter="start">
+            <label for="filterEnd" class="form-label">End</label>
+            <input type="date" class="form-control" id="filterEnd" placeholder="dd/mm/yyyy" aria-label="Date" aria-describedby="basic-addon1" data-record-filter="end">
+          </div>
+          <div class="records__filter--container">
+            <label for="filterType" class="form-label">Type</label>
+            <select type="input" class="form-select" id="filterType" aria-label="Type" aria-describedby="basic-addon1" data-record-filter="type">
+              <option value="default" selected>All</option>
+              <option value="measure"> Measure </option>
+              <option value="laboratory"> Laboratory </option>
+              <option value="composition"> Composition </option>
+              <option value="protocol"> Protocol </option>
+              <option value="media"> Media </option>
+            </select>
+            <label for="filterSubtype" class="form-label">Subtype</label>
+            <select type="input" class="form-select" id="filterSubtype" aria-label="Type" aria-describedby="basic-addon1" data-record-filter="subtype">
+              <option value="default" selected>All</option>
+            </select>
+          </div>
+          <div class="records__filter--container">
+            <label for="filterText" class="form-label">Contain</label>
+            <input type="text" class="form-control" id="filterText" placeholder="Any text here">            
+          </div>
         </div>
         
         <!--list of records-->
@@ -217,45 +235,46 @@
 
     <!-- Modal -->
     <section class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form class="row g-3">
-              <div class="records__modal--list" data-record-list="list">
-                <div class="col-md-6">
+      <form data-record-list="form">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Record</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            
+              <div class="records__modal--main">
+                <div class="records__modal--date">
                   <label for="inputDate" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="inputDate" placeholder="dd/mm/yyyy" aria-label="Date" aria-describedby="basic-addon1">
+                  <input type="date" class="form-control" id="inputDate" placeholder="dd/mm/yyyy" aria-label="Date" aria-describedby="basic-addon1" data-record-list="date">
                 </div>
-                <div class="col-md-6">
+                <div class="records__modal--type">
                   <label for="inputType" class="form-label">Type</label>
-                  <select type="input" class="form-select" id="inputType" aria-label="Type" aria-describedby="basic-addon1">
+                  <select type="input" class="form-select" id="inputType" aria-label="Type" aria-describedby="basic-addon1" data-record-list="type">
                     <option value="default" hidden selected>Choose</option>
                     <option value="measure"> Measure </option>
-                    <option value="laboratoy"> Laboratory </option>
+                    <option value="laboratory"> Laboratory </option>
                     <option value="composition"> Composition </option>
                     <option value="protocol"> Protocol </option>
                     <option value="media"> Media </option>
                   </select>
                 </div>
-                <div class="valid-feedback">
-                  Record date is required
-                </div>
-                <div class="col-md-12" data-record-list="addButton">
-                  <button class="btn btn-light" type="button" data-record-list="addItem">Mais</button>
-                </div>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="records__modal--list" data-record-list="list">
+              </div> 
+              <div class="col-md-12" data-record-list="addButton">
+                <button class="btn btn-light" type="button" data-record-list="addItem">Mais</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-record-list="clearAll">Clear All</button>
+              <button type="submit" class="btn btn-primary" data-record-list="submit">Submit</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </section>
 
   </body>

@@ -7,7 +7,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0.5rem;
 }
 
@@ -46,7 +46,19 @@
 
 .records__filter {
   display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .records__filter {
+    flex-direction: column;
+  }
+}
+
+.records__filter--container {
+  margin: 1rem 2rem;
 }
 
 .records__filter--hide {

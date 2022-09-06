@@ -9,13 +9,17 @@ export class recordComposition {
       return lowerLimitComposition(composition, age, gender);
     };
   }
-
-  compositionList() {
-    const list = ["type1", "type2", "type3"];
-    return list;
-  }
 }
 
 function higherLimitComposition(composition, age, gender) {}
 
 function lowerLimitComposition(composition, age, gender) {}
+
+export const compositionList = [
+  "Gordura Corporal",
+  "Mass Magra",
+  "Água Corporal",
+  "Gordura Visceral",
+  "Gasto Energético Basal",
+  "Gasto Energético Total"
+];

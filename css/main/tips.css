@@ -1,15 +1,48 @@
 .tips {
   --height-tips: 9rem;
+  background-color: darkblue;
   box-sizing: border-box;
+  color: white;
+  font-size: 0.8rem;
   height: var(--height-tips);
+}
+
+.tips__inner {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .tips {
+    --height-mobile-tips: 1.5rem;
+    height: var(--height-mobile-tips);
+  }
+
+  .tips__inner {
+    display: none;
+  }
+}
+
+.tips__reduced--icon {
+  display: none;
+}
+
+.tips__reduce--content {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .tips__reduced--icon {
+    color: white;
+    display: block;
+    font-size: 1rem;
+    margin-left: 1rem;
+    position: fixed;
+  }
 }
 
 .tips__body {
   align-items: center;
-  background-color: darkblue;
-  color: white;
   display: flex;
-  font-size: 0.7rem;
   height: calc(var(--height-tips) - 1rem);
   justify-content: stretch;
   margin: 0;

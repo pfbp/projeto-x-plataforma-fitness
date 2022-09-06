@@ -5917,6 +5917,7 @@ textarea.form-control-lg {
   width: 10%;
 }
 .carousel-control-close {
+  height: 2rem;
   width: 5%;
 }
 
@@ -5946,7 +5947,7 @@ textarea.form-control-lg {
 }
 
 .carousel-control-close {
-  right:-1rem;
+  right:0rem;
   top: 0;
 }
 
