@@ -1,4 +1,8 @@
-import { measureList } from "../Model/recordMeasure.js";
+import { measureList } from "../Model/record-measure.js";
+import { laboratoryList } from "../Model/record-laboratory.js";
+import { compositionList } from "../Model/record-composition.js";
+import { protocolList } from "../Model/record-protocol.js";
+import { newRecord } from "../Controller/submit-records.js";
 
 const $ = document.querySelector.bind(document);
 const recordsFilter = $("#recordsFilter");
@@ -19,6 +23,8 @@ function openModal() {
   typeSelector.addEventListener("change", updateAllButtons);
   let dateSelector = document.querySelector('[data-record-list="date"]');
   dateSelector.addEventListener("change", updateAllButtons);
+  let submit = document.querySelector('[data-record-list="submit"]');
+  submit.addEventListener("click", newRecord);
   removeAllItems();
   updateAllButtons();
 }
@@ -152,7 +158,6 @@ function newItem() {
     child.setAttribute("data-record-list", "file");
     child.setAttribute("name", "name");
     child.classList.add("form-control");
-    fillPossibleMeasures(child);
     container.appendChild(child);
 
     column.appendChild(container);
@@ -264,6 +269,7 @@ function removeRecordItem() {
 }
 
 function fillPossibleMeasures(item) {
+  const type = document.querySelector('[data-record-list="type"]');
   let child = document.createElement("option");
   child.textContent = "Choose";
   child.setAttribute("value", "");
@@ -272,7 +278,23 @@ function fillPossibleMeasures(item) {
   child.setAttribute("hidden", "");
   item.appendChild(child);
 
-  let options = measureList;
+  let options;
+  switch (type.value) {
+    case "measure":
+      options = measureList;
+      break;
+    case "laboratory":
+      options = laboratoryList;
+      break;
+    case "composition":
+      options = compositionList;
+      break;
+    case "protocol":
+      options = protocolList;
+      break;
+    default:
+      console.error(new Error("fill list for switch not available"));
+  }
   options.forEach((opcao) => {
     let child = document.createElement("option");
     child.textContent = opcao;

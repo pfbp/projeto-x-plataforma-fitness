@@ -17,7 +17,7 @@ export class recordList {
     this._records = [];
   }
 
-  ad(record) {
+  add(record) {
     this._records.push(record);
   }
 

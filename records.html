@@ -28,7 +28,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="css/records/recordsMain.css"
+      href="css/records/records-main.css"
     />
 
     <!--external fonts-->
@@ -44,9 +44,10 @@
     />
 
     <!--internal javascript-->
-    <script defer src="js/View/tipsView.js"></script>
-    <script type="module" src="js/Model/recordMeasure.js"></script>
-    <script type="module" src="js/View/recordsView.js"></script>
+    <script defer src="js/View/tips-view.js"></script>
+    <script type="module" src="js/Model/record-measure.js"></script>
+    <script type="module" src="js/View/records-view.js"></script>
+    <script type="module" src="js/Controller/submit-records.js"></script>
     <script defer src="js/bootstrap/bootstrap.js"></script>
   </head> 
   
@@ -270,7 +271,7 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button type="button" class="btn btn-secondary" data-record-list="clearAll">Clear All</button>
-              <button type="submit" class="btn btn-primary" data-record-list="submit">Submit</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" data-record-list="submit">Submit</button>
             </div>
           </div>
         </div>

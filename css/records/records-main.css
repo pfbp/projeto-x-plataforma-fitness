@@ -1,6 +1,6 @@
-@import "recordsHeader.css";
-@import "recordsList.css";
-@import "recordsModal.css";
+@import "records-header.css";
+@import "records-list.css";
+@import "records-modal.css";
 
 .records {
   --bg-color-records: white;

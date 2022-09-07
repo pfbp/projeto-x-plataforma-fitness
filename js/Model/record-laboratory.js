@@ -2,18 +2,16 @@ export class recordLaboratory {
   constructor(laboratory, value, age, gender) {
     this._laboratory = laboratory;
     this._value = value;
-    this._higherLimit = (laboratory, age, gender) => {
-      return higherLimitLaboratory(laboratory, age, gender);
-    };
-    this._lowerLimit = (laboratory, age, gender) => {
-      return lowerLimitLaboratory(laboratory, age, gender);
-    };
+    this._higherLimit = this.higherLimitLaboratory();
+    this._lowerLimit = this.lowerLimitLaboratory();
+  }
+  higherLimitLaboratory() {
+    return 2;
+  }
+  lowerLimitLaboratory() {
+    return 1;
   }
 }
-
-function higherLimitLaboratory(laboratory, age, gender) {}
-
-function lowerLimitLaboratory(laboratory, age, gender) {}
 
 export const laboratoryList = [
   "Hemograma",
