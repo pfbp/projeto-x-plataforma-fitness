@@ -59,10 +59,17 @@ export function newRecord(event) {
 }
 
 export async function publishRecords(records) {
-  const requestURL =
-    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
-  const request = new Request(requestURL);
-
-  const response = await fetch(request);
-  const reuquestRecords = await response.json();
+  let file = "#/json/records.json";
+  let jsonRecords = JSON.stringify(records);
+  console.log(jsonRecords);
+  const publishContent = {
+    method: "POST",
+    body: jsonRecords
+  };
+  return fetch(file, publishContent)
+    .then((response) => response.json())
+    .then(() => console.log("registered"))
+    .catch((err) => {
+      throw Error(err);
+    });
 }
