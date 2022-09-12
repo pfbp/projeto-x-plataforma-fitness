@@ -1,4 +1,4 @@
-export class recordImage {
+export class RecordImage {
   constructor(image) {
     this._image = image;
   }

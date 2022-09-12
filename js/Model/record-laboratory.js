@@ -1,4 +1,4 @@
-export class recordLaboratory {
+export class RecordLaboratory {
   constructor(laboratory, value, age, gender) {
     this._laboratory = laboratory;
     this._value = value;

@@ -1,4 +1,4 @@
-export class recordProtocol {
+export class RecordProtocol {
   constructor(protocol, value, deadline) {
     this._protocol = protocol;
     this._value = value;

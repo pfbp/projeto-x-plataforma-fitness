@@ -3,17 +3,11 @@ import { laboratoryList } from "../Model/record-laboratory.js";
 import { compositionList } from "../Model/record-composition.js";
 import { protocolList } from "../Model/record-protocol.js";
 import { newRecord } from "../Controller/submit-records.js";
-import { getRecords } from "../Controller/show-list-records.js";
 
 const $ = document.querySelector.bind(document);
-const recordsFilter = $("#recordsFilter");
 const newRecordButton = $('[data-record="newRecord"]');
-const filterButton = $('[data-record="filter"]');
 
 newRecordButton.addEventListener("click", () => openModal());
-filterButton.addEventListener("click", () => {
-  recordsFilter.classList.toggle("records__filter--hide");
-});
 
 function openModal() {
   const newButton = document.querySelector('[data-record-list="addItem"]');

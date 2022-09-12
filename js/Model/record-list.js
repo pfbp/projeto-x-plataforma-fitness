@@ -1,5 +1,5 @@
 //Create the record
-export class createRecord {
+export class CreateRecord {
   constructor(date, type) {
     this._date = date;
     this._type = type;
@@ -12,7 +12,7 @@ export class createRecord {
 }
 
 //Create the list of all records
-export class recordList {
+export class RecordList {
   constructor() {
     this._records = [];
   }

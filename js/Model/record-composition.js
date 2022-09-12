@@ -1,4 +1,4 @@
-export class recordComposition {
+export class RecordComposition {
   constructor(composition, value, age, gender) {
     this._composition = composition;
     this._value = value;

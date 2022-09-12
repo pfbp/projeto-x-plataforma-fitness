@@ -45,8 +45,8 @@
 
     <!--internal javascript-->
     <script defer src="js/View/tips-view.js"></script>
-    <script type="module" src="js/Model/record-measure.js"></script>
-    <script type="module" src="js/View/records-view.js"></script>
+    <script type="module" src="js/View/modal-records-view.js"></script>
+    <script type="module" src="js/View/list-records-view.js"></script>
     <script type="module" src="js/Controller/submit-records.js"></script>
     <script type="module" src="js/Controller/show-list-records.js"></script>
     <script defer src="js/bootstrap/bootstrap.js" ></script>
@@ -213,21 +213,14 @@
               <tr>
                 <th>Type</th>
                 <th>Date</th>
-                <th>Records</th>
+                <th>Record</th>
                 <th>Edit</th>
               </tr>
             </thead>
 
             <!--lines of list of records-->
             <tbody class="records__list--body">
-              <tr class="records__list--item">
-                <td>Measure</td>
-                <td>2020-01-01</td>
-                <td>8</td>
-                <td>
-                  <button><i class="fa-solid fa-pen-to-square"></i></button>
-                </td>
-              </tr>
+              
             </tbody>
           </table>
         </div>

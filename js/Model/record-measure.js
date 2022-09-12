@@ -1,4 +1,4 @@
-export class recordMeasure {
+export class RecordMeasure {
   constructor(measure, value) {
     this._measure = measure;
     this._value = value;
