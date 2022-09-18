@@ -61,18 +61,18 @@ export function newRecord(event) {
 }
 
 export async function publishRecords(records) {
-  let file = "#/json/records.json";
+  let file = "http://localhost:3000/db.json";
   let jsonRecords = JSON.stringify(records);
-  // const publishContent = {
-  //   method: "POST",
-  //   body: jsonRecords
-  // };
-  // return fetch(file, publishContent)
-  //   .then((response) => response.json())
-  //   .then(() => console.log("registered"))
-  //   .catch((err) => {
-  //     throw Error(err);
-  //   });
+  const publishContent = {
+    method: "POST",
+    body: jsonRecords
+  };
+  return fetch(file, publishContent)
+    .then((response) => response.json())
+    .then(() => console.log("registered"))
+    .catch((err) => {
+      throw Error(err);
+    });
 }
 
 export { allRecords };
