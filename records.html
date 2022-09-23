@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Track on your evolution! - Name</title>
+    <title>Track on your evolution! - BYOB</title>
     <meta
       name="description"
       content="Work your shape, record your evolutions, share with your connections, encourage your friends! Evolve!"
@@ -21,13 +21,13 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="./css/main/styles.css"
+      href="css/main/styles.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="./css/records/records-main.css"
+      href="css/records/records-main.css"
     />
 
     <!--external fonts-->
@@ -43,39 +43,37 @@
     />
 
     <!--internal javascript-->
-    <script defer src="js/View/tips-view.js"></script>
-    <script type="module" src="./js/View/modal-records-view.js"></script>
-    <script type="module" src="./js/View/list-records-view.js"></script>
-    <script type="module" src="./js/Controller/submit-records.js"></script>
-    <script type="module" src="./js/Controller/show-list-records.js"></script>
-    <script defer src="./js/bootstrap/bootstrap.js" ></script>
+    <script defer type="module" src="./js/Controller/Tips-controller.js"></script>
+    <script defer type="module" src="./js/Controller/SendMessage-controller.js"></script>
+    <script defer type="module" src="./js/Controller/CreateRecord-controller.js"></script>
+    <script defer type="module" src="./js/Controller/CreateProtocol-controller.js"></script>
+    <script defer type="module" src="js/bootstrap/bootstrap.js" ></script>
   </head> 
   
   <body>
     <header>
-    <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Build Your Own Body</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav class="header__navbar">
+        <div class="header__navbar--container">
+          <a class="header__navbar--brand" href="index.html">Build Your Own Body</a>
+          <button class="header__navbar--toogler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="header__navbar--toogler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html">Profile</a>
+          <div class="header__navbar--collapse" id="navbarCollapse">
+            <ul class="header__navbar--list">
+              <li class="header__navbar--item">
+                <a class="header__navbar--link" href="profile.html">Profile</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="connections.html">Connections</a>
+              <li class="header__navbar--item">
+                <a class="header__navbar--link" href="connections.html">Connections</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="records.html">Records</a>
+              <li class="header__navbar--item">
+                <a class="header__navbar--link" href="records.html">Records</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              <li class="header__navbar--item">
+                <a class="header__navbar--link" href="dashboard.html">Dashboard</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="configuration.html">Configuration</a>
+              <li class="header__navbar--item">
+                <a class="header__navbar--link" href="configuration.html">Configuration</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
