@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Registre suas evoluções - Nome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Registre suas evoluções e compartilhe com seus contatos. Incentive-se, incentive seus amigos, EVOLUA!">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/registros/registrosTips.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/registros/registrosHeader.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/registros/registrosLista.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/registros/registrosModal.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9f458f6222.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Cabeçalho com logo, menu e Login -->
+    <header class="header-container">
+      <h1 class="header__logo">
+        <span> Logo Placeholder </span>
+      </h1>
+      <ul class="header__menu">
+        <li><a href="perfil.html" class="menu__item menu__item--perfil">Meu Perfil</a></li>
+        <li><a href="contatos.html" class="menu__item menu__item--contatos">Meus Contatos</a></li>
+        <li><a href="registros.html" class="menu__item menu__item--registros">Registros</a></li>
+        <li><a href="protocolos.html" class="menu__item menu__item--protocolos">Protocolos</a></li>
+        <li><a href="customizar.html" class="menu__item menu__item--customizar">Customizar</a></li>
+      </div>
+        <button class="header__login">
+          <span class="header__login--imagem"><i class="fa-solid fa-circle-user"></i></span>
+          <span class="header__login--usuario"> Usuário </span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Início corpo da página -->
+    <main>
+      <!-- Tips -->
+      <section class="registros__tips-container" id="RegistrosTips">
+        <div class="registros__tips registros__tips--dica1">
+          <p> Você pode registrar:<br></p>
+          <ul class="registrosTips__listaItens">
+            <li> Medidas - que envolvem altura, peso e medidas na fita métrica.</li>
+            <li> Exames laboratoriais - com marcadores de saúde e hormonais.</li>
+            <li> Composição corporal - gordura, músculos e água.</li>
+            <li> Imagens - fotos e vídeos para que todos possam ver sua evolução.</li>
+            <li> Protocolos - suas dietas, exercícios e suplementações.
+          </ul>
+        </div>
+        <div class="registros__tips registros__tips--dica2 registrosTips__esconder">
+          <p> Texto da dica 2</p>
+        </div>
+        <div class="registros__tips registros__tips--dica3 registrosTips__esconder">
+          <p> Texto da dica 3</p>
+        </div>
+        <button class="registrosTips__fechar" onclick="fechaTips()"> X </button>
+        <nav class="registrosTips__nav">
+            <button class="registrosTips__navItem">
+              <i class="fa-solid fa-circle-chevron-left"></i>
+            </button>
+            <span class="registrosTips__navItem" id="numeroNavTips">1 / 3</span>
+            <button class="registrosTips__navItem">
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </nav>
+      </section>
+
+      <!-- Cabeçalho do título e barramento de botões de registros-->
+      <section class="registros__header-container">
+        <h2 class="registros__titulo">Registros da sua evolução</h2>
+        <nav class="registros__menu">
+          <button class="registrosMenu__item" id="abreModalMedida">
+            <i class="fa-solid fa-ruler"></i>
+            <p>
+              + Medida
+            </p>
+          </button>
+          <button class="registrosMenu__item" onclick="abreModalLaboratorio()">
+            <i class="fa-solid fa-flask-vial"></i>
+            <p>
+              + Resultado <br />
+              Laboratório
+            </p>
+          </button>
+          <button class="registrosMenu__item" onclick="abreModalComposicao()">
+            <i class="fa-solid fa-person"></i>
+            <p>
+              + Composição <br />
+              Corporal
+            </p>
+          </button>
+          <button class="registrosMenu__item" onclick="abreModalImagem()">
+            <i class="fa-solid fa-camera"></i>
+            <p>
+              + Imagem
+            </p>
+          </button>
+          <button class="registrosMenu__item" onclick="abreModalProtocolo()">
+            <i class="fa-solid fa-list-check"></i>
+            <p>
+              + Protocolo
+            </p>
+          </button>
+          <button class="registrosMenu__item registrosMenu__item--filtro">
+            <i class="fa-solid fa-filter"></i>
+            <p>Filtrar</p>
+          </button>
+        </nav>
+      </section>
+
+      <!-- Tabela de registros -->
+      <section>
+        <table class="registros__lista" id="listaRegistros">
+          <thead><tr class="registros__lista--cabecalho">
+            <th class="registros__lista--itemCabecalho">Tipo</th>
+            <th class="registros__lista--itemCabecalho">Data</th>
+            <th class="registros__lista--itemCabecalho">Status</th>
+            <th class="registros__lista--itemCabecalho">Quantidade</th>
+            <th class="registros__lista--itemCabecalho">Prazo</th>
+            <th class="registros__lista--itemCabecalho">Comandos</th>
+          </tr></thead>
+          <tbody id="bodyListaRegistros"> </tbody>
+
+          
+          </table>
+      </section>
+    </main>
+
+    <!--Modais de entrada de registro-->
+    <!--Registro de medidas-->
+    <section class="registros__modal" id="modalNovaMedida">
+      <div class="registrosModal__container fade">
+        <form class="registrosModal__form" id="formRegistroMedidas">
+          <div class="registrosModal__header">
+            <h2 class="registrosModal__titulo">Registro de Medidas</h2>
+            <label for="dataMedida">Data</label>
+            <input type="date" placeholder="DD/MM/AAAA" id="dataMedida" class="registrosModal__date">
+            <span></span><span></span>
+            <button class="registros__modal--close" id="fechaModalMedida">X</button>
+          </div>
+          <div class="registrosModal__lista">
+            <div class="registrosModal__item">
+              <label for="nomeMedida">Item</label>
+              <select id="nomeMedida" name="nome"> </select>
+              <label for="valorMedida">Valor</label>
+              <input type="number" id="valorMedida" placeholder="0">
+              <span></span><span></span>
+              <button id="removerMedida">Remover</button>
+            </div>
+            <button class="registrosModal__maisItem" id="adicionaItemMedida">Mais um item</button>
+          </div>
+          <div class="registrosModal__footer">
+            <button class="registrosModal__submit">Submeter</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--Registro de laboratório-->
+    <section class="registros__modal" id="modalNovoLaboratorio">
+      <div class="registrosModal__container">
+        <form class="registrosModal__form" id="formRegistroLaboratorio">
+          <div class="registrosModal__header">
+            <h2 class="registrosModal__titulo">Registro de Resultados de Laboratório</h2>
+            <label for="dataLaboratorio">Data</label>
+            <input type="date" placeholder="DD/MM/AAAA" id="dataLaboratorio" class="registrosModal__date">
+            <span></span><span></span>
+            <button class="registros__modal--close" id="fechaModalLaboratorio">X</button>
+          </div>
+          <div class="registrosModal__lista">
+            <div class="registrosModal__item">
+              <label for="nomeLaboratorio">Item</label>
+              <select id="nomeLaboratorio" name="nome"> </select>
+              <label for="valorLaboratorio">Valor</label>
+              <input type="number" id="valorLaboratorio" placeholder="0.0">
+              <span></span><span></span>
+              <button id="removerLaboratorio">Remover</button>
+            </div>
+            <button class="registrosModal__maisItem" id="adicionaItemLaboratorio">Mais um item</button>
+          </div>
+          <div class="registrosModal__footer">
+            <button class="registrosModal__submit">Submeter</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--Registro de Composição Corporal-->
+    <section class="registros__modal" id="modalNovaComposicao">
+      <div class="registrosModal__container">
+        <h2>Registro de Composição Corporal</h2>
+        <button class="registros__modal--close"  onclick="fechaModalComposicao(event)">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de Imagens-->
+    <section class="registros__modal" id="modalNovaImagem">
+      <div class="registrosModal__container">
+        <h2>Registro de Imagens</h2>
+        <button class="registros__modal--close"  onclick="fechaModalImagem(event)">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <!--Registro de Protocolos-->
+    <section class="registros__modal" id="modalNovoProtocolo">
+      <div class="registrosModal__container">
+        <h2>Registro de Protocolos</h2>
+        <button class="registros__modal--close"  onclick="fechaModalProtocolo(event)">X</button>
+        <p>Texto de teste</p>
+      </div>
+    </section>
+
+    <footer class="footer-container">
+      <div>
+        <a href="index.html"> Voltar </a>
+      </div>
+    </footer>
+    
+    <script src="js/View/ViewTipsRegistros.js"></script>
+    <script src="js/Model/ListaRegistros.js"></script>
+    
+    <script src="js/Model/RegistraMedida.js"></script>
+    <script src="js/View/ViewModalMedida.js"></script>
+    <script src="js/Controller/medidaController.js"></script>
+
+    <script src="js/Model/RegistraLaboratorio.js"></script>
+    <script src="js/Model/RegistraComposicao.js"></script>
+    <script src="js/Model/RegistraImagem.js"></script>
+    <script src="js/Model/RegistraProtocolo.js"></script>
+    
+    <script src="js/Controller/registrosController.js"></script>
+    
+  </body>
+</html>

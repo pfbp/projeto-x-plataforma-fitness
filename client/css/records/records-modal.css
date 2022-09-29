@@ -1,0 +1,83 @@
+.register__modal {
+  --zindex-register-modal: 10;
+  --bg-color-register-modal: rgba(0, 0, 0, 0.8);
+  --bg-register-modal-dialog: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--zindex-register-modal);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.register__modal--dialog {
+  background-color: var(--bg-register-modal-dialog);
+  border-radius: 5px;
+  height: 80vh;
+  position: relative;
+  margin: auto;
+  pointer-events: none;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 90vw;
+}
+
+.register__modal.fade .register__modal--dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+.records__modal--main {
+  display: flex;
+  margin: 0 auto;
+  width: 95%;
+  margin-bottom: 0.5rem;
+}
+
+.records__modal--date,
+.records__modal--type {
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 0 0.2rem;
+}
+
+.records__modal--list {
+  display: inline;
+}
+
+.records__modal--column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0.2rem;
+}
+
+.records__modal--container {
+  display: block;
+  padding: 0.2rem;
+}
+
+.records__modal--item {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0.5px gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rem 0.3rem;
+  min-height: 10rem;
+  padding: 0.2rem;
+  width: 95%;
+}
+
+@media only screen and (max-width: 520px) {
+  .records__modal--item {
+    display: flex;
+    flex-direction: column;
+  }
+}
