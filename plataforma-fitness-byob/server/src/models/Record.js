@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const livroSchema = new mongoose.Schema(
+const recordSchema = new mongoose.Schema(
   {
     id: {type: String},
     titulo: {type: String, required: true},
@@ -10,6 +10,6 @@ const livroSchema = new mongoose.Schema(
   }
 );
 
-const livros= mongoose.model('livros', livroSchema);
+const records= mongoose.model('records', recordSchema);
 
-export default livros;
+export default records;
