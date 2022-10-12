@@ -7,9 +7,7 @@ export class Record {
   #highLimit;
   #lowLimit;
   constructor(user, date, type, item, value, gender, age) {
-    this.#recordId = (user) => {
-      return user.recordList.length;
-    };
+    this.#recordId = (user) => user.recordList.length;
     this.#date = new Date(date.getTime());
     this.#type = type;
     this.#item = item;

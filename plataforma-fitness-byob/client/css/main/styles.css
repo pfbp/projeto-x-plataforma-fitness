@@ -1,8 +1,6 @@
-@import "../bootstrap/bootstrap.css";
 @import "./navbar.css";
-@import "header.css";
-@import "footer.css";
-@import "tips.css";
+@import "./tips.css";
+@import "./footer.css";
 
 body {
   font-family: "Montserrat", sans-serif;
