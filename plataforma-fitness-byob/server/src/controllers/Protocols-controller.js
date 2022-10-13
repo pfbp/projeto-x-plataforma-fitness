@@ -1,4 +1,4 @@
-import protocols from "../models/Protocol.js";
+import protocols from "../models/Protocol-model.js";
 
 class ProtocolsController {
 

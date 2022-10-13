@@ -1,13 +1,15 @@
 export class Record {
-  #recordId;
+  #id;
+  #user;
   #date;
   #type;
   #item;
   #value;
   #highLimit;
   #lowLimit;
-  constructor(user, date, type, item, value, gender, age) {
-    this.#recordId = (user) => user.recordList.length;
+  constructor(user, date, type, item, value, gender, age, id="") {
+    this.#id = id;
+    this.#user = user;
     this.#date = new Date(date.getTime());
     this.#type = type;
     this.#item = item;

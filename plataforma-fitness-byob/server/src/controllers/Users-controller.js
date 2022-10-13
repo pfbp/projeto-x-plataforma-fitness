@@ -1,4 +1,4 @@
-import users from "../models/User.js";
+import users from "../models/User-model.js";
 
 class UsersController {
 

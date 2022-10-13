@@ -1,15 +1,15 @@
 export class Protocol {
-  #protocolId;
+  #id;
+  #user;
   #date;
   #type;
   #item;
   #termination;
   #frequency;
   #intensity;
-  constructor(user, date, type, item, termination, frequency, intensity) {
-    this.#protocolId = (user) => {
-      return user.protocolList.length;
-    };
+  constructor(user, date, type, item, termination, frequency, intensity, id="") {
+    this.#id = id;
+    this.#user = user;
     this.#date = new Date(date.getTime());
     this.#type = type;
     this.#item = item;

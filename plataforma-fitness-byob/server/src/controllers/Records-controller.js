@@ -1,4 +1,4 @@
-import records from "../models/Record.js";
+import records from "../models/Record-model.js";
 
 class RecordsController {
 

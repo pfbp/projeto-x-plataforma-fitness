@@ -1,7 +1,7 @@
 import express from "express";
-import records from "./recordsRoutes.js";
-import protocols from "./protocolsRoutes.js";
-import users from "./usersRoutes.js";
+import records from "./records-routes.js";
+import protocols from "./protocols-routes.js";
+import users from "./users-routes.js";
 
 const routes = (app) => {
   app.route('/').get((req, res) => {

@@ -5,6 +5,7 @@ export class User {
   #userName;
   #email;
   #password;
+  #status;
   #date;
   #birthday;
   #gender;
@@ -14,11 +15,12 @@ export class User {
   #connections;
   #recordsList;
   #protocolsList;
-  constructor(id, userName, email, password, level = "basic", birthday=undefined, gender=undefined, race=undefined) {
+  constructor(userName, email, password, status="active", id="", level = "basic", birthday=undefined, gender=undefined, race=undefined) {
     this.#id = id;
     this.#userName = userName;
     this.#email = email;
     this.#password = password;
+    this.#status = status;
     this.#date = new Date();
     this.#birthday = birthday;
     this.#gender = gender;
