@@ -1,6 +1,8 @@
 import mongoose from "mongoose"
 
-mongoose.connect("mongodb+srv://byob:byob@cluster0.lphozdc.mongodb.net/?");
+MONGO_URI = "mongodb+srv://byob:byob@cluster0.lphozdc.mongodb.net/?";
+
+mongoose.connect(MONGO_URI);
 let db = mongoose.connection;
 
 export default db;

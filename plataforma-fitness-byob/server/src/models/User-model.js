@@ -15,7 +15,8 @@ const userSchema = new mongoose.Schema(
     preferences: {type: Array, "default": []},
     connections: {type: Array, "default": []},
     recordsList: {type: Array, "default": []},
-    protocolsList: {type: Array, "default": []}
+    protocolsList: {type: Array, "default": []},
+    token: {type: String}
   }
 )
 
