@@ -1,22 +1,37 @@
+import {} from "./Tools/bootstrap-bundle.js";
+import {} from "./Tools/swiper-bundle.js";
+import { InitialContentView } from "./View/InitialContent-view.js";
 import { NavbarView } from "./View/Navbar-view.js";
 import { TipsView } from "./View/Tips-view.js";
 import { ProfileInitialView } from "./View/ProfileInitial-view.js";
+import { SendMessageController } from "./Controller/SendMessage-controller.js";
 
-let navbar = new NavbarView('[data-navbar]');
+let initialContent = document.querySelector('[data-initial-content]');
+if(initialContent) {
+    initialContent = new InitialContentView('[data-initial-content]');
+    initialContent.update();
+    initialContent.navigation();
+    SendMessageController.send("oi");
+}
+
+let navbar = document.querySelector('[data-navbar]');
 if(navbar){
+    navbar = new NavbarView('[data-navbar]');
     navbar.update();
     navbar.collapsible();
 }
 
-let tips = new TipsView('[data-tips]');
+let tips = document.querySelector('[data-tips]');
 if(tips) {
+    tips = new TipsView('[data-tips]');
     tips.update();
     tips.navigation();
     tips.collapsible();
 }
 
-let profileInitial = new ProfileInitialView('[data-profile-initial]');
+let profileInitial = document.querySelector('[data-profile-initial]');
 if(profileInitial) {
+    profileInitial = new ProfileInitialView('[data-profile-initial]');
     profileInitial.update();
     profileInitial.navigation();
 }

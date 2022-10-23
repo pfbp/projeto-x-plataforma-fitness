@@ -1,11 +1,14 @@
+import { User } from '../Model/User-model.js'
+
 export class UserLogin {
   #userEmail;
   #userPassword;
   #getUser;
+  #login;
   constructor() {
     let $ = document.querySelector.bind(document);
-    this.#userEmail = $('[data-user-email]');
-    this.#userPassword = $('[data-user-password]');
+    this.#userEmail = $('[data-user-email]').value;
+    this.#userPassword = $('[data-user-password]').value;
 
     this.#getUser = this.findUser(this.#userEmail);
 
@@ -18,7 +21,7 @@ export class UserLogin {
   }
 
   findUser(userEmail) {
-    let user;
+    let user = new User("pbemfica", "pedrobemfica@yahoo.com.br", "123pedro");
     return user;
   }
 }
