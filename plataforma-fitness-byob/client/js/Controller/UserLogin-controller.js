@@ -4,8 +4,8 @@ export class UserLogin {
   #getUser;
   constructor() {
     let $ = document.querySelector.bind(document);
-    this.#userEmail = $(["data-user-email"]);
-    this.#userPassword = $(["data-user-password"]);
+    this.#userEmail = $('[data-user-email]');
+    this.#userPassword = $('[data-user-password]');
 
     this.#getUser = this.findUser(this.#userEmail);
 
