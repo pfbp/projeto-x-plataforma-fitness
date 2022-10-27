@@ -1,7 +1,6 @@
 import { Connection } from "./Connection-model.js";
 
 export class User {
-  #id;
   #userName;
   #email;
   #password;
@@ -15,8 +14,8 @@ export class User {
   #connections;
   #recordsList;
   #protocolsList;
-  constructor(userName, email, password, status="active", id="", level = "basic", birthday=undefined, gender=undefined, race=undefined) {
-    this.#id = id;
+
+  constructor(userName, email, password, status="active", level ="basic", birthday=undefined, gender=undefined, race=undefined) {
     this.#userName = userName;
     this.#email = email;
     this.#password = password;
@@ -30,10 +29,6 @@ export class User {
     this.#connections = [];
     this.#recordsList = [];
     this.#protocolsList = [];
-  }
-
-  get id() {
-    return this.#id;
   }
   
   get userName() {

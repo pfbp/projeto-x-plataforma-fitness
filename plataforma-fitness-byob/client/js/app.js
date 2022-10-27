@@ -1,24 +1,29 @@
 import {} from "./Tools/bootstrap-bundle.js";
 import {} from "./Tools/swiper-bundle.js";
 import { InitialContentView } from "./View/InitialContent-view.js";
+import { NewUserView } from "./View/NewUser-view.js";
 import { NavbarView } from "./View/Navbar-view.js";
 import { TipsView } from "./View/Tips-view.js";
 import { ProfileInitialView } from "./View/ProfileInitial-view.js";
-import { SendMessageController } from "./Controller/SendMessage-controller.js";
 
 let initialContent = document.querySelector('[data-initial-content]');
 if(initialContent) {
     initialContent = new InitialContentView('[data-initial-content]');
     initialContent.update();
     initialContent.navigation();
-    SendMessageController.send("oi");
+}
+
+let newUser = document.querySelector('[data-form-new-user]');
+if (newUser) {
+    newUser = new NewUserView('[data-form-new-user]');
+    newUser.update();
+    newUser.navigation();
 }
 
 let navbar = document.querySelector('[data-navbar]');
 if(navbar){
     navbar = new NavbarView('[data-navbar]');
     navbar.update();
-    navbar.collapsible();
 }
 
 let tips = document.querySelector('[data-tips]');

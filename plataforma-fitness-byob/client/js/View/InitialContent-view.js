@@ -21,7 +21,7 @@ export class InitialContentView extends View {
                     <h1 class="modal-title fs-5" id="loginModalLabel">Insert your account information</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form>
+                <form data-login-form>
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="inputLoginEmail" class="form-label">Email address</label>
@@ -50,13 +50,11 @@ export class InitialContentView extends View {
     navigation() {
         let modal = document.querySelector('[data-modal]');
         modal.innerHTML = this.loginModalTemplate();
-        let submitButton = document.querySelector('[data-login-submit]');
-        submitButton.addEventListener('click', (event) => {
-            event.preventDefault();
+        let submitButton = document.querySelector('[data-login-form]');
+
+        submitButton.addEventListener('submit', (event) => {
             let user = new UserLogin();
-            window.location.href = "profile.html";
-        })
-        
-        
+            user.login(event);
+        });    
     }
 }
