@@ -1,4 +1,6 @@
 @import "./profile-user.css";
-@import "./profile-content.css";
-@import "./profile-records.css";
 @import "./profile-connections.css";
+@import "./profile-media.css";
+@import "./profile-records.css";
+@import "./profile-content.css";
+@import "./profile-protocols.css";

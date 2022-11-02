@@ -1,6 +1,5 @@
 import {} from "./Tools/bootstrap-bundle.js";
-// import {} from "./Tools/swiper-bundle.js";
-import { InitialContentView } from "./View/InitialContent-view.js";
+import { InitialView } from "./View/Initial-view.js";
 import { NewUserView } from "./View/NewUser-view.js";
 import { NavbarView } from "./View/Navbar-view.js";
 import { TipsView } from "./View/Tips-view.js";
@@ -9,11 +8,11 @@ import { ProfileContentView } from "./View/ProfileContent-view.js";
 import { ProfileRecordView } from "./View/ProfileRecord-view.js";
 import { ProfileConnectionView } from "./View/ProfileConnection-view.js";
 
-let initialContent = document.querySelector('[data-initial-content]');
-if(initialContent) {
-    initialContent = new InitialContentView('[data-initial-content]');
-    initialContent.update();
-    initialContent.navigation();
+let initial = document.querySelector('[data-initial-content]');
+if(initial) {
+    initial = new InitialView('[data-initial-content]');
+    initial.update();
+    initial.navigation();
 }
 
 let newUser = document.querySelector('[data-form-new-user]');

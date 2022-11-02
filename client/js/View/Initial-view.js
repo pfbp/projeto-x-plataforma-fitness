@@ -1,7 +1,7 @@
 import { View } from './View.js';
 import { UserLogin } from "../Controller/UserLogin-controller.js";
 
-export class InitialContentView extends View {
+export class InitialView extends View {
     template() {return `
         <div class="initial">
             <div class="initial-container">
