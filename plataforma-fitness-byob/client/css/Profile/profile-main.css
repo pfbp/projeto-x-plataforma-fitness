@@ -1,9 +1,0 @@
-@import "profile-user.css";
-@import "profile-content.css";
-@import "profile-connections.css";
-@import "profile-records.css";
-
-.records {
-  --bg-color-profile: white;
-  background-color: var(--bg-color-profile);
-}

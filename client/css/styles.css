@@ -1,0 +1,11 @@
+@import "./Tools/bootstrap.css";
+@import "./Tools/swiper-bundle.css";
+@import "./Main/navbar.css";
+@import "./Main/tips.css";
+@import "./Main/footer.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
