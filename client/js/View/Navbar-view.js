@@ -15,12 +15,7 @@ export class NavbarView extends View {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    ${this.navbarList.map(item => {
-                        return `
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="${item.data}">${item.name}</a>
-                            </li>
-                        `})}
+                    ${this.helperMenuOptions}
                     </ul>
 
                     <form class="d-flex" role="search">
@@ -34,11 +29,37 @@ export class NavbarView extends View {
 
     get navbarList(){
         return [
-            {name: "Profile", data:"profile.html"},
-            {name: "Dashboard", data:"dash.html"},
-            {name: "Records", data:"records.html"},
-            {name: "Connections", data:"connections.html"},
-            {name: "Configuration", data:"config.html"}
+            {type: "unique", name: "Profile", data:"profile.html"},
+            {type: "unique", name: "Dashboard", data:"dash.html"},
+            {type: "Social", name: "Connections", data:"connections.html"},
+            {type: "Social", name: "Challenges", data:"challenges.html"},
+            {type: "Inputs", name: "Records", data:"records.html"},
+            {type: "Inputs", name: "Protocols", data:"protocols.html"},
+            {type: "Inputs", name: "Media", data:"media.html"},
+            {type: "unique", name: "Content", data:"content.html"}
         ]
+    }
+
+    get helperMenuOptions() {
+        let options = this.navbarList;
+        let menu = "";
+        for (let i = 0; i < options.length; i++) {
+            const option = options[i];
+            const lastOption = (i==0) ? null : options[i-1];
+            const nextOption = (i==options.lengh) ? null : options[i+1];
+            if (option.type === "unique") {
+                menu = menu + `
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="${option.data}">${option.name}</a></li>
+                `
+            } else if (option.type !== lastOption.type) {
+                menu = menu + `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">${option.type}</a>
+                <ul class="dropdown-menu"><li><a class="dropdown-item" href="${option.data}">${option.name}</li>`
+            } else if (option.type !== nextOption.type) {
+                menu = menu + `<li><a class="dropdown-item" href="${option.data}">${option.name}</li></ul>`
+            } else {
+                menu = menu + `<li><a class="dropdown-item" href="${option.data}">${option.name}</li>`
+            }
+        }
+        return menu;
     }
 }

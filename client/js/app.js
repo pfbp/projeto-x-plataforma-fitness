@@ -7,6 +7,7 @@ import { TipsView } from "./View/Tips-view.js";
 import { ProfileUserView } from "./View/ProfileUser-view.js";
 import { ProfileContentView } from "./View/ProfileContent-view.js";
 import { ProfileRecordView } from "./View/ProfileRecord-view.js";
+import { ProfileConnectionView } from "./View/ProfileConnection-view.js";
 
 let initialContent = document.querySelector('[data-initial-content]');
 if(initialContent) {
@@ -42,11 +43,11 @@ if(profileInitial) {
     profileInitial.navigation();
 }
 
-let profileContent = document.querySelector('[data-profile-content]');
-if(profileContent) {
-    profileContent = new ProfileContentView('[data-profile-content]');
-    profileContent.update();
-    profileContent.navigation();
+let profileConnection = document.querySelector('[data-profile-connection]');
+if(profileConnection) {
+    profileConnection = new ProfileConnectionView('[data-profile-connection]');
+    profileConnection.update();
+    profileConnection.navigation();
 }
 
 let profileRecord = document.querySelector('[data-profile-record]');
@@ -54,4 +55,11 @@ if(profileRecord) {
     profileRecord = new ProfileRecordView('[data-profile-record]');
     profileRecord.update();
     profileRecord.navigation();
+}
+
+let profileContent = document.querySelector('[data-profile-content]');
+if(profileContent) {
+    profileContent = new ProfileContentView('[data-profile-content]');
+    profileContent.update();
+    profileContent.navigation();
 }

@@ -1,0 +1,55 @@
+.swiper-connection {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .connection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+  }
+  
+  .connection-header a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .connection-header a:hover {
+    color: gray;
+    text-decoration: none;
+  }
+  
+  .connection-header svg:hover {
+    fill: gray;
+    stroke: gray;
+  }
+  
+  .connection-expand-icon {
+    fill: black;
+    stroke: black;
+    height: 1rem;
+    width: 1rem;
+    margin-left: .5rem;
+  }
+  
+  .connection-title {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .connection-title {
+      display: none;
+    }
+  
+    .connection-header {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+  }
