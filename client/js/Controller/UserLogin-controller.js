@@ -24,7 +24,6 @@ export class UserLogin {
     event.preventDefault();
     let user = this.findUser(this.userEmail);
     let login = user.login(this.userEmail, this.userPassword);
-    console.log(login);
     if (login) {
       this.message.text = 'Login successed. Redirecting...';
       this.messageView.update(this.message);
