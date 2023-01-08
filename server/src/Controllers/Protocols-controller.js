@@ -1,10 +1,12 @@
 import protocols from "../models/Protocol-model.js";
 
 class ProtocolsController {
-  
+  static createRecord() {
+  }
 }
 
 export default ProtocolsController;
+
 
   // static listarProtocols = (req, res) => {
   //   protocols.find()

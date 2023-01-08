@@ -1,6 +1,8 @@
 import { User } from "../Model/User-model.js";
+import { Preferences } from "../Model/Preferences-model.js";
 import { Message } from "../Model/Message-model.js";
 import { MessageView } from "../View/Message-view.js";
+import { newUserRoute } from "../Config/server-routes.js";
 
 export class CreateUserController {
     constructor () {
@@ -18,11 +20,21 @@ export class CreateUserController {
         this.messageView.update(this.message);
     }
 
-    addNewUser(event) {
+    async addNewUser(event) {
         event.preventDefault();
-        let user = this.createNewUser();
+        const user = new User(this.userName, this.email, this.password, this.birthdate, this.gender, this.race);
+        const response = await fetch(newUserRoute, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+        const idUser = response.json().content.id;
+        const preferences = new Preferences(idUser, level=this.level);
        
-        if(false) { //TODO: select if problem for creating user
+        if(response.status !== 200) {
             this.message.text = 'Not able to create the user';
             this.messageView.update(this.message);
             this.messageView.send();
@@ -36,11 +48,4 @@ export class CreateUserController {
         }
 
     }
-
-    createNewUser() {
-        return new User(this.userName, this.email, this.password, 
-            "active", this.level, this.birthdate, this.gender, this.race);
-    }
-
-
 }

@@ -1,64 +1,66 @@
-import { Connection } from "./Connection-model.js";
-
 export class User {
+  #id;
   #userName;
   #email;
   #password;
-  #active;
-  #date;
-  #birthday;
+  #birthdate;
   #gender;
   #race;
-  #level;
-  #preferences;
-  #connections;
-  #recordsList;
-  #protocolsList;
+  #active;
+  #creation;
+  #lastLogin;
 
-  constructor(userName, email, password, active="active", level ="basic", birthday=undefined, gender=undefined, race=undefined) {
+  constructor(userName, email, password, birthdate=undefined, gender=undefined, race=undefined, active=true) {
     this.#userName = userName;
     this.#email = email;
     this.#password = password;
-    this.#active = active;
-    this.#date = new Date();
-    this.#birthday = birthday;
+    this.#birthdate = birthdate;
     this.#gender = gender;
     this.#race = race;
-    this.#level = level;
-    this.#preferences = [];
-    this.#connections = [];
-    this.#recordsList = [];
-    this.#protocolsList = [];
+    this.#active = active;
+    this.#creation = new Date();
   }
   
+  get id() {
+    return this.#id;
+  }
+
+  set id(id) {
+    this.#id = id;
+  }
+
   get userName() {
     return this.#userName;
   }
-
+  
   set userName(userName) {
     this.#userName = userName;
   }
-
+  
   get email() {
     return this.#email;
   }
-
-  set email(email) {
-    this.#email = email;
+  
+  set password(password) {
+    this.#password = password;
   }
 
-  get date() {
-    return this.#date;
+  get creation() {
+    return this.#creation;
   }
 
-  get birthday() {
-    return this.#birthday;
+  get lastLogin() {
+    return this.#lastLogin;
   }
 
-  set birthday(birthday) {
-    this.#birthday = new Date(birthday.getTime());
+  get birthdate() {
+    return this.#birthdate;
   }
-
+  
+  set birthdate(birthdate) {
+    this.#birthdate = new Date(birthdate.getTime());
+  }
+  
   get gender() {
     return this.#gender;
   }
@@ -66,7 +68,7 @@ export class User {
   set gender(gender) {
     this.#gender = gender;
   }
-
+  
   get race() {
     return this.#race;
   }
@@ -75,122 +77,26 @@ export class User {
     this.#race = race;
   }
 
-  get level() {
-    return this.#level;
-  }
-
-  set level(level) {
-    this.#level = level;
-  }
-  
-  get preferences() {
-    return this.#preferences;
-  }
-
-  get connections() {
-    return this.#connections;
-  }
-
-  get recordsList() {
-    return this.#recordsList;
-  }
-
-  get protocolsList() {
-    return this.#protocolsList;
-  }
-
-  set password(password) {
-    this.#password = password;
-  }
-
-  addPreference(preference) {
-    if (this.#preferences.includes(preference)) {
-      throw Error(`reference ${preference} already assigned`);
-    } else {
-      this.#preferences.concat(preference);
-    }
-  }
-
-  removePreference(preference) {
-    if (this.#preferences.includes(preference)) {
-      let index = this.#preferences.indexOf(preference);
-      this.#preferences.splice(index, 1);
-    } else {
-      throw Error(`preference ${preference} not found`);
-    }
-  }
-
-  addConnection(userId) {
-    let user = this.#connections.find((element) => element.userId === userId);
-    if (user === undefined) {
-      let connection = new Connection(userId, new Date());
-      this.#connections.concat(connection);
-    } else {
-      throw Error(`User ${user.userName} already connected`);
-    }
-  }
-
-  removeConnection(userId) {
-    let user = this.#connections.find((element) => element.userId === userId);
-    if (user === undefined) {
-      throw Error(`Connection with user ${userId} not found`);
-    } else {
-      let index = this.#connections.findIndex(
-        (element) => element.userId === userId
-      );
-      this.#connections.splice(index, 1);
-    }
-  }
-
-  addRecord(record) {
-    this.#recordsList.concat(record);
-  }
-
-  removeRecord(recordId) {
-    let index = this.#recordsList.findIndex(
-      (element) => element.recordId === recordId
-    );
-    this.#recordsList.splice(index, 1);
-  }
-
-  addProcotol(protocol) {
-    this.#protocolsList.concat(protocol);
-  }
-
-  removeProtocol(protocolId) {
-    let index = this.#protocolsList.findIndex(
-      (element) => element.protocolId === protocolId
-    );
-    this.#protocolsList.splice(index, 1);
-  }
-
   login(email, password) {
-    if (email === this.#email && password === this.#password) {
+    if (email === this.#email && password === this.#password && this.#active === true) {
+      let date = new Date();
+      this.lastLogin(date);
       return true;
-    } else {
-      return false;
+    } else { 
+      return (this.#active === true) ? "User not existent" : "E-mail or password incorrect";
     }
+  }  
+  
+  lastLogin(date) {
+    this.#lastLogin = new Date(date.getTime());
   }
 
-  static preferenceOptions() {
-    const list = [
-      "Food and diet",
-      "Bodybuilding",
-      "Aerobic",
-      "Running",
-      "Cycling",
-      "Swimming",
-      "HIIT",
-      "Stretching",
-      "Pilates",
-      "Yoga",
-      "Wellbeing",
-      "Muscle growth",
-      "Lose weigth",
-      "Performance increase",
-      "Hormons",
-      "Natural life"
-    ];
-    return list;
+  inactivate(email, password) {
+    if (email === this.#email && password === this.#password) {
+      this.#active = false;
+      return "User deleted";
+    } else {
+      return "E-mail or password incorrect";
+    }
   }
 }

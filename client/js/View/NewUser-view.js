@@ -80,8 +80,8 @@ export class NewUserView extends View {
 
     navigation() {
         let submitButton = document.querySelector('[data-form-new-user]'); 
+        let user = new CreateUserController();
         submitButton.addEventListener('submit', (event) => {
-            let user = new CreateUserController();
             user.addNewUser(event);
         }); 
 
