@@ -81,6 +81,7 @@ export class User {
     if (email === this.#email && password === this.#password && this.#active === true) {
       let date = new Date();
       this.lastLogin(date);
+      // insert the logic for the user token
       return true;
     } else { 
       return (this.#active === true) ? "User not existent" : "E-mail or password incorrect";
